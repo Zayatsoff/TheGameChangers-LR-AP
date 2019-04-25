@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
   background(220, 244, 240);
-  ///
+  /// Main_Text
 
   ///
 
