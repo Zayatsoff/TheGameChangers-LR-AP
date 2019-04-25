@@ -5,11 +5,13 @@ function setup() {
 
 }
 
-function preload() {
-  edunline = loadFont('Fonts/edunline.tff');
-}
+/*function preload() {
+edunline = loadFont("Fonts\edunline.tff");
+}*/
 
 function draw() {
-  splash();
+
+splash();
+splash.update();
 
 }
