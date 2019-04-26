@@ -1,2 +1,2 @@
 # ICS2O-TheNewMarioMakers-LR-AP
-Learn with us game summative - LiorR and AkashP;
+Learn with us game summative - Lior Rozin and Akash Prasad;
