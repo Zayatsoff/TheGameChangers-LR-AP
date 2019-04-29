@@ -4,6 +4,7 @@ class Splash {
     this.x=width/2;
     this.y=height/2;
     this.size=40;
+    this.spacebar=30;
     this.GO_UP = 1;
   }
 
@@ -17,9 +18,16 @@ class Splash {
   //textFont(edunline);
   fill(0);
   textAlign(CENTER);
-  text('GameName!', this.x ,this.y);
+  text('Jump or thump!', this.x ,this.y);
+
+  textSize(this.spacebar);
+  //textFont(edunline);
+  fill(0);
+  textAlign(CENTER);
+  text('Press "Space" to start', this.x,this.y +60);
 
 }
+
    update(){
      this.size += this.GO_UP;
      if (this.size < 40 || this.size > 70) {
