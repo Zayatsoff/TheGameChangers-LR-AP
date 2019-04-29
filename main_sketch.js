@@ -14,6 +14,6 @@ function draw() {
 
   splash.update();
   splash.show();
-  aksMenu();
+  Switch('w',aksMenu);
 
 }
