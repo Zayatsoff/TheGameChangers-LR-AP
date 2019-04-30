@@ -14,6 +14,5 @@ function draw() {
   splash.update();
   splash.show();
   Switch(32,aksMenu);
-
-
+  Switch(69 ,aksInstructions);
 }
