@@ -1,4 +1,4 @@
-
+// keyCodes: http://keycode.info/
 let splash ;
 
 function setup() {
@@ -11,9 +11,9 @@ splash= new Splash();
 edunline = loadFont("Fonts\edunline.tff");
 }*/
 function draw() {
-
   splash.update();
   splash.show();
-  Switch('w',aksMenu);
+  Switch(32,aksMenu);
+
 
 }
