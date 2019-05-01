@@ -24,12 +24,12 @@ function aksMenu() {
   textSize(40);
   fill(255, 0, 0);
   text("Play!", 215, 360);
-
+sceneNum = 4;
 
 }
 
 
-/*
+
 function aksInstructions() {
   background(255)
 
@@ -63,4 +63,4 @@ function aksInstructions() {
   text("- Enter the correct value to aswer the", 15, 265);
   text("question", 15, 285);
 
-} */
+}

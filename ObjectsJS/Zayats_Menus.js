@@ -25,13 +25,15 @@ class Splash {
   fill(0);
   textAlign(CENTER);
   text('Press "Space" to start', this.x,this.y +60);
-
+sceneNum = 0;
 }
 
    update(){
      this.size += this.GO_UP;
      if (this.size < 40 || this.size > 70) {
        this.GO_UP*=-1;
+
+       sceneNum = 0;
 
      }
 
