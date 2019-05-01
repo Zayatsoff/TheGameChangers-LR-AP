@@ -20,10 +20,10 @@ function draw() {
 
 }
 
-function mouseClicked() {
-  if (cod = 1) {
-    aksInstructions();
+//function mouseClicked() {
+//  if (cod = 1) {
+//    aksInstructions();
+//
+//  }
 
-  }
-
-}
+//}
