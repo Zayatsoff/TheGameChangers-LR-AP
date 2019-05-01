@@ -25,7 +25,7 @@ class Splash {
   fill(0);
   textAlign(CENTER);
   text('Press "Space" to start', this.x,this.y +60);
-cod = 1;
+
 }
 
    update(){
