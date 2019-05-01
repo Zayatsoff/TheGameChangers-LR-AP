@@ -1,23 +1,32 @@
 function aksMenu() {
 background(53, 184, 198);
-
+  
   //title
-
-
-  fill(128, 0, 0);
-  //rect(20,5,350,175);
-  //fill(255,255,255)
-  //rect(23,8,5,5);
-  //ect(362,8,5,5);
-  //rect(362,172,5,5);
-  //rect(23,172,5,5);
-
   textSize(73);
   fill(255,255,255);
-  text("Jump or ",22,69);
+  text("Jump",175,69);
+  text("or",230,122)
   textSize(65);
-  text("Thump",30,140);
-
+  text("Thump!",155,180);
+  
+  
+  //Rules
+  textSize(30)
+  text("Instructions",180,285)
+  
+  //aboutUs
+  text("About us",15,230)
+  
+  //options
+  text("Settings",400,245)
+  
+  //Play button
+  textSize(40)
+  fill(255,0,0)
+  text("Play!",215, 360);
+                                             
+ 
+}
 
   //Rules
   textSize(30)
