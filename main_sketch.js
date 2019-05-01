@@ -16,7 +16,7 @@ function draw() {
   splash.update();
   splash.show();
   Switch(32,aksMenu);
-  SwitchClick(0,10,0,50,1);
+  SwitchClick(100,200,100,200,1);
 
 }
 
