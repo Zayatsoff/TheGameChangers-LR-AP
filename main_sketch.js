@@ -14,19 +14,14 @@ edunline = loadFont("Fonts\edunline.tff");
 function draw() {
   splash.update();
   splash.show();
-
   Switch(32,aksMenu);
-
- if (sceneNum = 1) {
-   aksInstructions();
-}
-
 }
 
 function mouseClicked() {
-  if(sceneNum = 0 && mouseX >= 100 && mouseX <= 0 && mouseY >= 100 && mouseY <= 0) {
-    sceneNum = 1;
+  console.log()
+  if(sceneNum = 4 && mouseX >= 100 && mouseX <= 0 && mouseY >= 100 && mouseY <= 0) {
+    aksInstructions();
   }
-  
+
 
 }
