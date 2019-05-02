@@ -23,7 +23,7 @@ if(keyCode === 32 && sceneNum >= -1 && sceneNum <=0) {
 
 function mouseClicked() {
   console.log(sceneNum)
-  if(sceneNum = 4 && mouseX >= 100 && mouseX <= 0 && mouseY >= 100 && mouseY <= 0) {
+  if(mouseX >= 180 && mouseX <= 235 && mouseY >= 2 && mouseY <= 275) {
     aksInstructions();
   }
 
