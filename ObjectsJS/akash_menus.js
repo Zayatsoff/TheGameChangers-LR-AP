@@ -1,4 +1,5 @@
 function aksMenu() {
+  currentScene= 1;
 background(53, 184, 198);
 
   //title
@@ -12,8 +13,9 @@ background(53, 184, 198);
 
   //Rules
   textSize(30)
-  text("Instructions",180,285)
   rect(180,255,155,40)
+  fill(0, 0, 0);
+  text("Instructions",180,285)
 
   //aboutUs
   text("About us",15,230)
@@ -26,8 +28,8 @@ background(53, 184, 198);
   fill(255,0,0)
   text("Play!",215, 360);
 
-}
 
+}
 
 
 
