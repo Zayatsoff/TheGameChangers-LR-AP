@@ -12,11 +12,13 @@ edunline = loadFont("Fonts\edunline.tff");
 }*/
 
 function draw() {
-  splash.update();
-  splash.show();
-  if(keyCode === 32 && sceneNum === 0) {
+  push();
+ splash.update();
+splash.show();
+pop();
+if(keyCode === 32 && sceneNum >= -1 && sceneNum <=0) {
     aksMenu();
-  }
+}
 }
 
 function mouseClicked() {
