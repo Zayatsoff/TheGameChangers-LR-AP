@@ -10,6 +10,7 @@ class Splash {
 
   show(){
   background(220, 244, 240);
+
  //this.x = width /2;
   //this.y = height/2;
   /// Main_Text
@@ -24,6 +25,7 @@ class Splash {
   fill(0);
   textAlign(CENTER);
   text('Press "Space" to start', this.x,this.y +60);
+
 }
    update(){
      this.size += this.GO_UP;
