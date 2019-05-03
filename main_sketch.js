@@ -8,6 +8,10 @@ splash = new Splash();
 }
 
 function draw() {
+  if (SceneNum === 0) {
+  aksMenu();
+  }
+  
 push();
 splash.update();
 splash.show();
