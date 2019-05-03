@@ -9,6 +9,7 @@ class Splash {
   }
 
   show() {
+    SceneNum = 0;
     background(220, 244, 240);
 
     //this.x = width /2;
@@ -28,6 +29,7 @@ class Splash {
 
   }
   update() {
+    SceneNum = 0;
     this.size += this.GO_UP;
     if (this.size < 40 || this.size > 70) {
       this.GO_UP *= -1;
