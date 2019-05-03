@@ -1,4 +1,4 @@
-fvar SceneNum = 0;
+var SceneNum = 0;
 
 function aksMenu() {
   SceneNum= 1;
