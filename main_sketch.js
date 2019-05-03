@@ -16,12 +16,3 @@ if(keyCode === 32 && sceneNum >= -1 && sceneNum <=1) {
     aksMenu();
 }
 }
-
-function mouseClicked() {
-  console.log(sceneNum)
- if(mouseX >= 180 && mouseX <= 235 && mouseY >= 2 && mouseY <= 275) {
-    aksInstructions();
-  }
-
-
-}
