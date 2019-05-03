@@ -5,7 +5,6 @@ var SceneNum = 0;
 function setup() {
   createCanvas(550, 400);
   splash = new Splash();
-
 }
 
 function draw() {
@@ -14,7 +13,9 @@ function draw() {
   }
   if (SceneNum === 2) {
     aksInstructions();
-  } else {
+  }
+
+  else {
     push();
     splash.update();
     splash.show();
@@ -23,6 +24,7 @@ function draw() {
       aksMenu();
     }
   }
+
 }
 
 function mouseClicked() {
@@ -30,7 +32,10 @@ function mouseClicked() {
     aksInstructions();
     SceneNum = 2;
   }
+  else  if (SceneNum === 2 && mouseX >= 30 && mouseX <= 90 && mouseY >= 365 && mouseY <= 335) {
+    aksMenu();
+    SceneNum = 1;
+  }
 
   //if (SceneNum === 1 && mouse Y)
-
 }
