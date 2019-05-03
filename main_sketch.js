@@ -14,18 +14,15 @@ function draw() {
   }
   if (SceneNum === 2) {
     aksInstructions();
+  } else {
+    push();
+    splash.update();
+    splash.show();
+    pop();
+    if (keyCode === 32 && SceneNum === 0) {
+      aksMenu();
+    }
   }
-
-
-else {
-  push();
-  splash.update();
-  splash.show();
-  pop();
-  if (keyCode === 32 && SceneNum === 0) {
-    aksMenu();
-  }
-}
 }
 
 function mouseClicked() {
