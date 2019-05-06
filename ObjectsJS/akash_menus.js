@@ -90,3 +90,28 @@ function aksPlayScreen() {
   
   
 }
+
+function aksGameOver() {
+  background(255,0,0)
+  
+  textSize(50)
+  text("You are a failure!!!!",70,200)
+  
+  textSize(30)
+  text("Click to try again",150,250)
+  
+  text("EXIT",480,390)
+
+}
+
+function aksCorrect () {
+  background(55, 209, 35)
+  
+  
+  fill(0,0,0)
+  
+  textSize(80)
+ text("Great Job!",90,200)
+  textSize(35)
+  text("Next",355,300)
+}
