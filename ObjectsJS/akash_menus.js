@@ -121,12 +121,12 @@ function aksCorrect () {
 
 function aksAboutUs() {
 background(255, 255, 0);
-  
+
   //title
   fill(0,0,255) ;
   textSize(35);
   text("About Us",200,30);
-  
+
   textSize(25);
   text("Developed by the billiant student of ",20,100);
   text("A.Y.Jackson, Lior Rozin and Akash Prasad.",20,125);
@@ -134,7 +134,7 @@ background(255, 255, 0);
   text("This game was inspired by the ideas of Dexter,",20,250)
   text("Abygail, and Jeremy.",20,275);
 
-  
+
   textSize(15)
   text("Due Date", 450,390);
 }

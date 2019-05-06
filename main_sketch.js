@@ -1,10 +1,14 @@
 // keyCodes: http://keycode.info/
 let splash;
+var confet = [];
 var SceneNum = 0;
 
 function setup() {
   createCanvas(550, 400);
   splash = new Splash();
+  for (var i = 0; i < 500; i++) {
+    confet[i] = new Confetti();
+  }
 }
 
 function draw() {
@@ -28,6 +32,12 @@ function draw() {
     }
   }
 
+
+  // aksCorrect();
+  // for (var i = 0; i < 500; i++) {
+  //   confet[i].display();
+  //   confet[i].update();
+  // }
 }
 
 function mouseClicked() {
