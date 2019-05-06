@@ -53,5 +53,10 @@ function mouseClicked() {
     aksPlayScreen();
   SceneNum = 3;
   }
+  ////////////change botton
+  if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
+    aksAboutUs();
+  SceneNum = 6;
+  }
 
 }

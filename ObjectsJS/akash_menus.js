@@ -107,6 +107,7 @@ function aksGameOver() {
 }
 
 function aksCorrect () {
+  SceneNum = 5;
   background(55, 209, 35)
 
 
@@ -120,6 +121,7 @@ function aksCorrect () {
 
 
 function aksAboutUs() {
+  SceneNum = 6;
 background(255, 255, 0);
 
   //title
