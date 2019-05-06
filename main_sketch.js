@@ -30,11 +30,11 @@ function draw() {
 function mouseClicked() {
   if (SceneNum === 1 && mouseX >= 180 && mouseX <= 335 && mouseY >= 255 && mouseY <= 295) {
     aksInstructions();
-    SceneNum = 2;
+
   }
-  else  if (SceneNum === 2 && mouseX >= 30 && mouseX <= 90 && mouseY >= 365 && mouseY <= 335) {
+  if (SceneNum === 2 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
     aksMenu();
-    SceneNum = 1;
+
   }
 
   //if (SceneNum === 1 && mouse Y)
