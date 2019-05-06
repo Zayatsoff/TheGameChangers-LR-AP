@@ -11,8 +11,11 @@ function draw() {
   if (SceneNum === 1) {
     aksMenu();
   }
-  if (SceneNum === 2) {
+  else if (SceneNum === 2) {
     aksInstructions();
+  }
+  else if (SceneNum === 3) {
+    aksPlayScreen();
   }
 
   else {
@@ -30,12 +33,15 @@ function draw() {
 function mouseClicked() {
   if (SceneNum === 1 && mouseX >= 180 && mouseX <= 335 && mouseY >= 255 && mouseY <= 295) {
     aksInstructions();
-
+    SceneNum = 2;
   }
   if (SceneNum === 2 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
     aksMenu();
-
+      SceneNum = 1;
+  }
+  if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
+    aksPlayScreen();
+  SceneNum = 3;
   }
 
-  //if (SceneNum === 1 && mouse Y)
 }

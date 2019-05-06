@@ -75,41 +75,43 @@ function aksInstructions() {
 
 
 function aksPlayScreen() {
+  SceneNum = 3;
   background(55, 156, 229)
-  
+
   textSize(45)
   text("Choose your character",45,50)
-  
-  //where the character drawings will go 
+
+  //where the character drawings will go
   rect(125,120,80,120);
   rect(325,120,80,120);
-  
+
   //begin
   textSize(60)
   text("Play!",200,350)
-  
-  
+
+
 }
 
 function aksGameOver() {
+  SceneNum = 4;
   background(255,0,0)
-  
+
   textSize(50)
   text("You are a failure!!!!",70,200)
-  
+
   textSize(30)
   text("Click to try again",150,250)
-  
+
   text("EXIT",480,390)
 
 }
 
 function aksCorrect () {
   background(55, 209, 35)
-  
-  
+
+
   fill(0,0,0)
-  
+
   textSize(80)
  text("Great Job!",90,200)
   textSize(35)
