@@ -72,3 +72,21 @@ function aksInstructions() {
   text("Back",30,373);
 
 }
+
+
+function aksPlayScreen() {
+  background(55, 156, 229)
+  
+  textSize(45)
+  text("Choose your character",45,50)
+  
+  //where the character drawings will go 
+  rect(125,120,80,120);
+  rect(325,120,80,120);
+  
+  //begin
+  textSize(60)
+  text("Play!",200,350)
+  
+  
+}
