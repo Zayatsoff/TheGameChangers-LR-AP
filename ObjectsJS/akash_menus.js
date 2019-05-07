@@ -18,10 +18,16 @@ function aksMenu() {
   text("Instructions", 180, 285);
 
   //aboutUs
-  text("About us", 15, 230);
+  fill(255)
+  rect(15,205,120,30)
+  fill(0,0,0)
+  text("About us",15,230)
 
   //options
-  text("Settings", 400, 245);
+  fill(255)
+  rect(400,220,110,35)
+  fill(0,0,0)
+  text("Settings",400,245)
 
   //Play button
   textSize(40);
