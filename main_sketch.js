@@ -21,6 +21,10 @@ function draw() {
   else if (SceneNum === 3) {
     aksPlayScreen();
   }
+  else if (SceneNum === 6) {
+    aksAboutUs();
+  }
+
 
   else {
     push();
@@ -45,18 +49,20 @@ function mouseClicked() {
     aksInstructions();
     SceneNum = 2;
   }
-  if (SceneNum === 2 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
+  else if (SceneNum === 2 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
     aksMenu();
       SceneNum = 1;
   }
-  if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
+  else if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
     aksPlayScreen();
-  SceneNum = 3;
+    SceneNum = 3;
   }
-  ////////////change botton
-  if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
+  else if (SceneNum === 1 && mouseX >= 15 && mouseX <= 135 && mouseY >= 205-5 && mouseY <= 235) {
     aksAboutUs();
-  SceneNum = 6;
+    SceneNum = 6;
   }
-
+  else if (SceneNum === 6 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
+    aksMenu();
+      SceneNum = 1;
+  }
 }
