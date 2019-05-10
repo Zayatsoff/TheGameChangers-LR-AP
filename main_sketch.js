@@ -4,6 +4,8 @@
 let splash;
 var confet = [];
 var SceneNum = 0;
+var player;
+var keyUsed = 0;
 
 function setup() {
   createCanvas(550, 400);
@@ -13,6 +15,7 @@ function setup() {
   for (var i = 0; i < 500; i++) {
     confet[i] = new Confetti();
   }
+  player = new Player();
 }
 
 function draw() {
@@ -31,6 +34,10 @@ function draw() {
   //About us
   else if (SceneNum === 6) {
     aksAboutUs();
+  }
+  //Play
+  else if (SceneNum === 7) {
+    playDev();
   }
 
   //Splash
@@ -78,4 +85,22 @@ function mouseClicked() {
     aksMenu();
     SceneNum = 1;
   }
+
+  //Back to Menu from Instructions
+  else if (SceneNum === 3 && mouseX >= 200 && mouseX <= 290 && mouseY >= 300 && mouseY <= 350) {
+    playDev();
+    SceneNum = 7;
+  }
+}
+
+function keyPressed() {
+  if (SceneNum === 7 && keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
+    player.jump();
+  }
+
+  if (SceneNum === 7 && keyCode === 32 && player.playerTouch() === true) {
+    player.jump();
+  }
+
+
 }

@@ -24,3 +24,100 @@ function Confetti() {
     }
   }
 }
+
+function Player() {
+  this.y = height - 20;
+  this.x = width / 2;
+
+  this.gravity = 0.6;
+  this.velocity = 0;
+  this.jumpForce = -15;
+  this.speed = 4;
+
+  this.display = function() {
+    fill(122, 255, 0, 80);
+    stroke(255)
+    strokeWeight(2)
+    rect(this.x, this.y, 30, -50);
+  }
+
+  this.jump = function() {
+    this.velocity += this.jumpForce;
+  }
+
+  this.update = function() {
+    this.velocity += this.gravity;
+    this.y += this.velocity;
+    // ground detection (?)
+    if (this.y > height - 20) {
+      this.y = height - 20;
+      this.velocity = 0;
+    }
+    if (keyIsPressed === false) {
+      this.speed = 4
+    }
+
+  }
+
+  this.rightMovement = function() {
+    this.x += this.speed;
+    if (keyIsDown(68)) {
+      this.speed += 0.1;
+    } else {
+      this.speed = 4
+    }
+  }
+
+  this.leftMovement = function() {
+    this.x -= this.speed;
+    if (keyIsDown(65)) {
+      this.speed += 0.2;
+    }
+  }
+
+  this.edge = function() {
+    if (this.x <= 20 && keyIsDown(65) || this.x >= width - 45 && keyIsDown(68)) {
+      this.speed = 0;
+    }
+    this.playerTouch = function() {
+      if (player.x <= 27 || this.x >= width - 50) {
+        return true
+      } else {
+        return false
+      }
+    }
+  }
+}
+
+
+
+function playDev() {
+  SceneNum = 7;
+  this.rgb1 = player.x/3;
+  this.rgb2 = player.y/3;
+
+    background(this.rgb1,53 , this.rgb2);
+    fill(0,0,0,90);
+    rect(0,0,width,height)
+    player.display();
+    player.update();
+    if (keyIsDown(68)) {
+      player.rightMovement();
+    }
+    if (keyIsDown(65)) {
+      player.leftMovement();
+    }
+    player.edge();
+    }
+
+    function keyPressed() {
+    if (keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
+      player.jump();
+    }
+
+    if (keyCode === 32 && player.playerTouch() === true) {
+      player.jump();
+    }
+
+
+}
