@@ -46,6 +46,7 @@ function Player() {
   }
 
   this.update = function() {
+    translate(player.x,player.y);
     this.velocity += this.gravity;
     this.y += this.velocity;
     // ground detection (?)
