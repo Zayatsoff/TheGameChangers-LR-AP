@@ -1,6 +1,6 @@
 function aksMenu() {
   SceneNum = 1;
-  background(53, 184, 198);
+background(mouseX-100, mouseY-100, 200);
 
   //title
   textSize(73);
