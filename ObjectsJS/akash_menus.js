@@ -99,6 +99,59 @@ function aksPlayScreen() {
 
 }
 
+
+function aksSettings() {
+    background(0, 255, 255)
+   
+  textSize(40)
+  fill(102, 55, 188)
+  text("Settings",200,50)
+  
+  textSize(20)
+  fill(0,0,0);
+  text("Change Background Color:",30, 100);
+  
+  //red
+  textSize(30);
+  fill(255)
+  rect(285,80,65,30,8)
+  fill(255,0,0);
+  text("Red",290,105);
+  
+  //blue
+  fill(255)
+  rect(385,80,70,30,8)
+  fill(0,0,255)
+  text("Blue",390,105)
+  
+  textSize(20)
+  fill(0,0,0)
+  
+  //text color
+  text("Change text color:",30,200)
+  
+  //red
+  textSize(30)
+  fill(255,255,255)
+  rect(215, 175,65,29,8)
+  fill(255,0,0)
+  text("Red",220,200)
+  
+  //blue
+  fill(255,255,255)
+  rect(310,175,70,30,8)
+  fill(0,0,255)
+  text("Blue",315,200)
+  
+  //backButton
+  textSize(28)
+  fill(255)
+  rect(35,275,70,30,8)
+  fill(0,0,0)
+  text("Back",40,300)
+
+}
+
 function aksGameOver() {
   SceneNum = 4;
   background(255, 0, 0)
