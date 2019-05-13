@@ -40,6 +40,11 @@ function draw() {
     playDev();
   }
 
+  //Settings
+  else if (SceneNum === 8) {
+    aksSettings();
+  }
+
   //Splash
   else {
     push();
@@ -74,8 +79,8 @@ function mouseClicked() {
   else if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
     aksPlayScreen();
     SceneNum = 3;
-  }
-  //Open About us screen from Menu
+   }
+  //Open Abo ut us screen from Menu
   else if (SceneNum === 1 && mouseX >= 15 && mouseX <= 135 && mouseY >= 205 - 5 && mouseY <= 235) {
     aksAboutUs();
     SceneNum = 6;
@@ -90,8 +95,19 @@ function mouseClicked() {
   else if (SceneNum === 3 && mouseX >= 200 && mouseX <= 290 && mouseY >= 300 && mouseY <= 350) {
     playDev();
     SceneNum = 7;
+    //
   }
+  //Open Settings screen from Menu
+  else if (SceneNum === 1 && mouseX >= 340 && mouseX <= 500 && mouseY >= 225 - 5 && mouseY <= 270) {
+    aksSettings();
+    SceneNum = 8;
 }
+//Back to Menu from Instructions
+else if (SceneNum === 8 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
+  aksMenu();
+  SceneNum = 1;
+}
+ }
 
 function keyPressed() {
   if (SceneNum === 7 && keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
