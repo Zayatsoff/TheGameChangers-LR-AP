@@ -1,15 +1,17 @@
 function aksMenu() {
   SceneNum = 1;
-background(mouseX-100, mouseY-100, 200);
+  backgroundColour();
 
   //title
+  stroke(2);
   textSize(73);
+
   fill(255, 255, 255);
   text("Jump", 175, 69);
   text("or", 230, 122);
   textSize(65);
   text("Thump!", 155, 180);
-
+  noStroke();
 
   //Rules
   textSize(30);
@@ -102,51 +104,51 @@ function aksPlayScreen() {
 
 function aksSettings() {
   SceneNum = 8;
-    background(0, 255, 255)
+  backgroundColour();
 
   textSize(40)
   fill(102, 55, 188)
-  text("Settings",200,50)
+  text("Settings", 200, 50)
 
   textSize(20)
-  fill(0,0,0);
-  text("Change Background Color:",30, 100);
+  fill(0, 0, 0);
+  text("Change Background Color:", 30, 100);
 
-  //red
+  //rainbow
   textSize(30);
   fill(255)
-  rect(285,80,65,30,8)
-  fill(255,0,0);
-  text("Red",290,105);
+  rect(285, 80, 65, 30, 8)
+  fill(255, 0, 0);
+  text("?", 310, 105);
 
   //blue
   fill(255)
-  rect(385,80,70,30,8)
-  fill(0,0,255)
-  text("Blue",390,105)
+  rect(385, 80, 110, 30, 8)
+  fill(0, 0, 255)
+  text("Normal", 390, 105)
 
   textSize(20)
-  fill(0,0,0)
+  fill(0, 0, 0)
 
   //text color
-  text("Change text color:",30,200)
+  text("Change text color:", 30, 200)
 
   //red
   textSize(30)
-  fill(255,255,255)
-  rect(215, 175,65,29,8)
-  fill(255,0,0)
-  text("Red",220,200)
+  fill(255, 255, 255)
+  rect(215, 175, 65, 29, 8)
+  fill(255, 0, 0)
+  text("?", 310, 200)
 
   //blue
-  fill(255,255,255)
-  rect(310,175,70,30,8)
-  fill(0,0,255)
-  text("Blue",315,200)
+  fill(255, 255, 255)
+  rect(310, 175, 70, 30, 8)
+  fill(0, 0, 255)
+  text("Blue", 315, 200)
 
   //backButton
   fill(255);
-  rect(30, 350, 60, 30);
+  rect(30, 350, 60, 30, 8);
   fill(255, 0, 0);
   textSize(20);
   text("Back", 30, 373);
@@ -202,7 +204,7 @@ function aksAboutUs() {
   text("Due Date", 450, 390);
 
   //backButton
-    textSize(25);
+  textSize(25);
   fill(255);
   rect(30, 350, 60, 30);
   fill(255, 0, 0);

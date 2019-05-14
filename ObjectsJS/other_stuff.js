@@ -46,7 +46,7 @@ function Player() {
   }
 
   this.update = function() {
-    translate(player.x,player.y);
+
     this.velocity += this.gravity;
     this.y += this.velocity;
     // ground detection (?)
@@ -80,12 +80,14 @@ function Player() {
     if (this.x <= 20 && keyIsDown(65) || this.x >= width - 45 && keyIsDown(68)) {
       this.speed = 0;
     }
-    this.playerTouch = function() {
-      if (player.x <= 27 || this.x >= width - 50) {
-        return true
-      } else {
-        return false
-      }
+
+  }
+
+  this.playerTouch = function() {
+    if (player.x <= 27 || this.x >= width - 50) {
+      return true
+    } else {
+      return false
     }
   }
 }
@@ -93,32 +95,40 @@ function Player() {
 
 
 function playDev() {
-  SceneNum = 7;
-  this.rgb1 = player.x/3;
-  this.rgb2 = player.y/3;
+  this.rgb1 = player.x / 3;
+  this.rgb2 = player.y / 3;
 
-    background(this.rgb1,53 , this.rgb2);
-    fill(0,0,0,90);
-    rect(0,0,width,height)
-    player.display();
-    player.update();
-    if (keyIsDown(68)) {
-      player.rightMovement();
-    }
-    if (keyIsDown(65)) {
-      player.leftMovement();
-    }
-    player.edge();
-    }
+  background(this.rgb1, 53, this.rgb2);
+  fill(0, 0, 0, 90);
+  rect(0, 0, width, height)
+  player.display();
+  player.update();
+  if (keyIsDown(68)) {
+    player.rightMovement();
+  }
+  if (keyIsDown(65)) {
+    player.leftMovement();
+  }
+  player.edge();
+}
 
-    function keyPressed() {
-    if (keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
-      player.jump();
-    }
+function keyPressed() {
+  if (keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
+    player.jump();
+  }
 
-    if (keyCode === 32 && player.playerTouch() === true) {
-      player.jump();
-    }
+  if (keyCode === 32 && player.playerTouch() === true) {
+    player.jump();
+  }
 
 
+}
+
+function backgroundColour() {
+  if (bgColour === 1) {
+    background(mouseX - 100, mouseY - 100, 200);
+  } else {
+    image(bgIMG, -30, 0, 800, 600);
+
+  }
 }

@@ -6,6 +6,12 @@ var confet = [];
 var SceneNum = 0;
 var player;
 var keyUsed = 0;
+var bgColour;
+
+
+function preload() {
+  bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
+}
 
 function setup() {
   createCanvas(550, 400);
@@ -79,9 +85,7 @@ function mouseClicked() {
   else if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
     aksPlayScreen();
     SceneNum = 3;
-   }
-  //Open Abo ut us screen from Menu
-  else if (SceneNum === 1 && mouseX >= 15 && mouseX <= 135 && mouseY >= 205 - 5 && mouseY <= 235) {
+  } else if (SceneNum === 1 && mouseX >= 15 && mouseX <= 135 && mouseY >= 205 - 5 && mouseY <= 235) {
     aksAboutUs();
     SceneNum = 6;
   }
@@ -101,13 +105,23 @@ function mouseClicked() {
   else if (SceneNum === 1 && mouseX >= 340 && mouseX <= 500 && mouseY >= 225 - 5 && mouseY <= 270) {
     aksSettings();
     SceneNum = 8;
+  }
+  //Back to Menu from Instructions
+  else if (SceneNum === 8 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
+    aksMenu();
+    SceneNum = 1;
+  }
+  //Settings : Rainbow colour  285, 80, 65, 30, 8
+  else if (SceneNum === 8 && mouseX >= 280 && mouseX <= 280 + 65 && mouseY >= 80 && mouseY <= 110) {
+    bgColour = 1;
+  }
+
+  //Settings : noRainbow
+  else if (SceneNum === 8 && mouseX >= 385 && mouseX <= 385 + 100 && mouseY >= 80 && mouseY <= 110) {
+    bgColour = 0;
+
+  }
 }
-//Back to Menu from Instructions
-else if (SceneNum === 8 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
-  aksMenu();
-  SceneNum = 1;
-}
- }
 
 function keyPressed() {
   if (SceneNum === 7 && keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
