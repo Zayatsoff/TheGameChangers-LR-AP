@@ -109,7 +109,6 @@ function mouseClicked() {
   //Back to Menu from Instructions
   else if (SceneNum === 8 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
     aksMenu();
-
     SceneNum = 1;
   }
   //Settings : Rainbow colour  285, 80, 65, 30, 8
@@ -123,14 +122,17 @@ function mouseClicked() {
 
   }
 
-  //Settings : Rainbow text
-  else if (SceneNum === 8 && mouseX >= 280 && mouseX <= 280 + 65 && mouseY >= 80 && mouseY <= 110) {
-    bgColour = 1;
+  //Settings : Easy
+  else if (SceneNum === 8 && mouseX >= 210 && mouseX <= 280 && mouseY >= 175 && mouseY <= 175+30) {
+    aksMenu();
+    SceneNum = 1;
   }
 
-  //Settings : noRainbow text
-  else if (SceneNum === 8 && mouseX >= 385 && mouseX <= 385 + 100 && mouseY >= 80 && mouseY <= 110) {
-    bgColour = 0;
+  //Settings : Hard
+  else if (SceneNum === 8 && mouseX >= 310 && mouseX <= 440 && mouseY >= 175 && mouseY <= 175+30) {
+    aksMenu();
+    background(255);
+    SceneNum = 1;
 
   }
 }

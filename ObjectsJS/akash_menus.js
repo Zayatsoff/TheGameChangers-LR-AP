@@ -112,7 +112,7 @@ function aksSettings() {
 
   textSize(20);
   fill(255);
-  text("Change Background Color:", 30, 100);
+  text("What background colour?", 30, 100);
   noStroke();
   //rainbow
   textSize(30);
@@ -128,25 +128,26 @@ function aksSettings() {
   rect(385, 80, 110, 30, 8);
   fill(0, 0, 255);
   text("Normal", 390, 105);
-
   textSize(20);
   fill(255);
   stroke(4);
+
   //text color
-  text("Change text color:", 30, 200);
+  text("How difficult?", 30, 200);
   noStroke();
+
   //red
   textSize(30);
   fill(255);
   rect(210, 175, 70, 30, 6);
   fill(255, 0, 0);
-  text("?", 235, 200);
+  text("Easy", 210, 200);
 
   //blue
   fill(255, 255, 255);
-  rect(310, 175, 70, 30, 6);
+  rect(310, 175, 130, 30, 6);
   fill(0, 0, 255);
-  text("Blue", 315, 200);
+  text("Not easy", 315, 200);
 
   //backButton
   fill(255);

@@ -111,7 +111,9 @@ function playDev() {
   }
   player.edge();
 }
-// keyCode === 87
+
+
+
 function keyPressed() {
   if ( player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
     player.jump();
@@ -129,15 +131,6 @@ function backgroundColour() {
     background(mouseX - 100, mouseY - 100, 200);
   } else {
     image(bgIMG, -30, 0, 800, 600);
-
-  }
-}
-
-function textColour() {
-  if (bgColour === 1) {
-    background(mouseX - 100, mouseY - 100, 200);
-  } else {
-    fill(255)
 
   }
 }
