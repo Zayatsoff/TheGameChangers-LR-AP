@@ -15,22 +15,22 @@ function aksMenu() {
 
   //Rules
   textSize(30);
-  rect(180, 255, 155, 40,6);
+  rect(180, 255, 155, 40, 6);
   fill(0, 0, 0);
   text("Instructions", 180, 285);
 
   //aboutUs
-  fill(255)
-  rect(15, 205, 120, 30,6)
+  fill(255);
+  rect(15, 205, 120, 30, 6);
 
-  fill(0, 0, 0)
-  text("About us", 15, 230)
+  fill(0, 0, 0);
+  text("About us", 15, 230);
 
   //options
-  fill(255)
-  rect(400, 220, 110, 35,6)
-  fill(0, 0, 0)
-  text("Settings", 400, 245)
+  fill(255);
+  rect(400, 220, 110, 35, 6);
+  fill(0, 0, 0);
+  text("Settings", 400, 245);
 
   //Play button
   textSize(40);
@@ -76,7 +76,7 @@ function aksInstructions() {
 
   //backButton
   fill(255);
-  rect(30, 350, 60, 30,6);
+  rect(30, 350, 60, 30, 6);
   fill(255, 0, 0);
   text("Back", 30, 373);
 
@@ -85,18 +85,18 @@ function aksInstructions() {
 
 function aksPlayScreen() {
   SceneNum = 3;
-  background(55, 156, 229)
+  background(55, 156, 229);
 
-  textSize(45)
+  textSize(45);
   text("Choose your character", 45, 50)
 
   //where the character drawings will go
-  rect(125, 120, 80, 120,6);
-  rect(325, 120, 80, 120,6);
+  rect(125, 120, 80, 120, 6);
+  rect(325, 120, 80, 120, 6);
 
   //begin
-  textSize(60)
-  text("Play!", 200, 350)
+  textSize(60);
+  text("Play!", 200, 350);
 
 
 }
@@ -105,46 +105,48 @@ function aksPlayScreen() {
 function aksSettings() {
   SceneNum = 8;
   backgroundColour();
+  stroke(4);
+  textSize(40);
+  fill(102, 55, 188);
+  text("Settings", 200, 50);
 
-  textSize(40)
-  fill(102, 55, 188)
-  text("Settings", 200, 50)
-
-  textSize(20)
+  textSize(20);
   fill(255);
   text("Change Background Color:", 30, 100);
-
+  noStroke();
   //rainbow
   textSize(30);
   fill(255)
   rect(285, 80, 65, 30, 8)
   fill(255, 0, 0);
+
   text("?", 310, 105);
 
+
   //blue
   fill(255)
-  rect(385, 80, 110, 30, 8)
-  fill(0, 0, 255)
-  text("Normal", 390, 105)
+  rect(385, 80, 110, 30, 8);
+  fill(0, 0, 255);
+  text("Normal", 390, 105);
 
-  textSize(20)
-  fill(255)
-
+  textSize(20);
+  fill(255);
+  stroke(4);
   //text color
-  text("Change text color:", 30, 200)
-
+  text("Change text color:", 30, 200);
+  noStroke();
   //red
   textSize(30);
-  fill(255)
-  rect(285, 80, 65, 30, 8)
+  fill(255);
+  rect(210, 175, 70, 30, 6);
   fill(255, 0, 0);
-  text("?", 310, 200);
+  text("?", 235, 200);
 
   //blue
-  fill(255, 255, 255)
-  rect(310, 175, 70, 30, 6)
-  fill(0, 0, 255)
-  text("Blue", 315, 200)
+  fill(255, 255, 255);
+  rect(310, 175, 70, 30, 6);
+  fill(0, 0, 255);
+  text("Blue", 315, 200);
 
   //backButton
   fill(255);
@@ -157,29 +159,29 @@ function aksSettings() {
 
 function aksGameOver() {
   SceneNum = 4;
-  background(255, 0, 0)
+  background(255, 0, 0);
 
-  textSize(50)
-  text("You are a failure!!!!", 70, 200)
+  textSize(50);
+  text("You are a failure!!!!", 70, 200);
 
-  textSize(30)
-  text("Click to try again", 150, 250)
+  textSize(30);
+  text("Click to try again", 150, 250);
 
-  text("EXIT", 480, 390)
+  text("EXIT", 480, 390);
 
 }
 
 function aksCorrect() {
   SceneNum = 5;
-  background(55, 209, 35)
+  background(55, 209, 35);
 
 
-  fill(0, 0, 0)
+  fill(0, 0, 0);
 
-  textSize(80)
-  text("Great Job!", 90, 200)
-  textSize(35)
-  text("Next", 355, 300)
+  textSize(80);
+  text("Great Job!", 90, 200);
+  textSize(35);
+  text("Next", 355, 300);
 }
 
 
@@ -190,7 +192,8 @@ function aksAboutUs() {
   //title
   fill(0, 0, 255);
   textSize(35);
-  text("About Us", 200, 30);s
+  text("About Us", 200, 30);
+
 
   textSize(25);
   text("Developed by the billiant student of ", 20, 100);
@@ -206,7 +209,7 @@ function aksAboutUs() {
   //backButton
   textSize(25);
   fill(255);
-  rect(30, 350, 60, 30,6);
+  rect(30, 350, 60, 30, 6);
   fill(255, 0, 0);
   text("Back", 30, 373);
 }

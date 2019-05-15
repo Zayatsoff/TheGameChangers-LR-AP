@@ -132,3 +132,12 @@ function backgroundColour() {
 
   }
 }
+
+function textColour() {
+  if (bgColour === 1) {
+    background(mouseX - 100, mouseY - 100, 200);
+  } else {
+    fill(255)
+
+  }
+}

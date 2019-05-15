@@ -122,6 +122,17 @@ function mouseClicked() {
     bgColour = 0;
 
   }
+
+  //Settings : Rainbow text
+  else if (SceneNum === 8 && mouseX >= 280 && mouseX <= 280 + 65 && mouseY >= 80 && mouseY <= 110) {
+    bgColour = 1;
+  }
+
+  //Settings : noRainbow text
+  else if (SceneNum === 8 && mouseX >= 385 && mouseX <= 385 + 100 && mouseY >= 80 && mouseY <= 110) {
+    bgColour = 0;
+
+  }
 }
 
 function keyPressed() {
