@@ -111,13 +111,13 @@ function playDev() {
   }
   player.edge();
 }
-
+// keyCode === 87
 function keyPressed() {
-  if (keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
+  if ( player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
     player.jump();
   }
 
-  if (keyCode === 32 && player.playerTouch() === true) {
+  if ( player.playerTouch() === true && keyCode === 87) {
     player.jump();
   }
 

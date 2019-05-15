@@ -109,6 +109,7 @@ function mouseClicked() {
   //Back to Menu from Instructions
   else if (SceneNum === 8 && mouseX >= 30 && mouseX <= 90 && mouseY >= 325 && mouseY <= 375) {
     aksMenu();
+
     SceneNum = 1;
   }
   //Settings : Rainbow colour  285, 80, 65, 30, 8
@@ -124,11 +125,11 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-  if (SceneNum === 7 && keyCode === 32 && player.y > height - 21 && player.playerTouch() === false) {
+  if (SceneNum === 7  && player.y > height - 21 && player.playerTouch() === false && keyCode === 87 ) {
     player.jump();
   }
 
-  if (SceneNum === 7 && keyCode === 32 && player.playerTouch() === true) {
+  if (SceneNum === 7  && player.playerTouch() === true && keyCode === 87) {
     player.jump();
   }
 

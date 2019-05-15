@@ -15,20 +15,20 @@ function aksMenu() {
 
   //Rules
   textSize(30);
-  rect(180, 255, 155, 40);
+  rect(180, 255, 155, 40,6);
   fill(0, 0, 0);
   text("Instructions", 180, 285);
 
   //aboutUs
   fill(255)
-  rect(15, 205, 120, 30)
+  rect(15, 205, 120, 30,6)
 
   fill(0, 0, 0)
   text("About us", 15, 230)
 
   //options
   fill(255)
-  rect(400, 220, 110, 35)
+  rect(400, 220, 110, 35,6)
   fill(0, 0, 0)
   text("Settings", 400, 245)
 
@@ -76,7 +76,7 @@ function aksInstructions() {
 
   //backButton
   fill(255);
-  rect(30, 350, 60, 30);
+  rect(30, 350, 60, 30,6);
   fill(255, 0, 0);
   text("Back", 30, 373);
 
@@ -91,8 +91,8 @@ function aksPlayScreen() {
   text("Choose your character", 45, 50)
 
   //where the character drawings will go
-  rect(125, 120, 80, 120);
-  rect(325, 120, 80, 120);
+  rect(125, 120, 80, 120,6);
+  rect(325, 120, 80, 120,6);
 
   //begin
   textSize(60)
@@ -111,7 +111,7 @@ function aksSettings() {
   text("Settings", 200, 50)
 
   textSize(20)
-  fill(0, 0, 0);
+  fill(255);
   text("Change Background Color:", 30, 100);
 
   //rainbow
@@ -128,27 +128,27 @@ function aksSettings() {
   text("Normal", 390, 105)
 
   textSize(20)
-  fill(0, 0, 0)
+  fill(255)
 
   //text color
   text("Change text color:", 30, 200)
 
   //red
-  textSize(30)
-  fill(255, 255, 255)
-  rect(215, 175, 65, 29, 8)
-  fill(255, 0, 0)
-  text("?", 310, 200)
+  textSize(30);
+  fill(255)
+  rect(285, 80, 65, 30, 8)
+  fill(255, 0, 0);
+  text("?", 310, 200);
 
   //blue
   fill(255, 255, 255)
-  rect(310, 175, 70, 30, 8)
+  rect(310, 175, 70, 30, 6)
   fill(0, 0, 255)
   text("Blue", 315, 200)
 
   //backButton
   fill(255);
-  rect(30, 350, 60, 30, 8);
+  rect(30, 350, 60, 30, 6);
   fill(255, 0, 0);
   textSize(20);
   text("Back", 30, 373);
@@ -190,7 +190,7 @@ function aksAboutUs() {
   //title
   fill(0, 0, 255);
   textSize(35);
-  text("About Us", 200, 30);
+  text("About Us", 200, 30);s
 
   textSize(25);
   text("Developed by the billiant student of ", 20, 100);
@@ -206,7 +206,7 @@ function aksAboutUs() {
   //backButton
   textSize(25);
   fill(255);
-  rect(30, 350, 60, 30);
+  rect(30, 350, 60, 30,6);
   fill(255, 0, 0);
   text("Back", 30, 373);
 }
