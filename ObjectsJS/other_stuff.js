@@ -60,7 +60,7 @@ function Player() {
 
   }
 
-  this.rightMovement = function() {
+  th is.rightMovement = function() {
     this.x += this.speed;
     if (keyIsDown(68)) {
       this.speed += 0.1;
@@ -73,14 +73,22 @@ function Player() {
     this.x -= this.speed;
     if (keyIsDown(65)) {
       this.speed += 0.2;
+
     }
   }
-
+  // && keyIsDown(65)?
   this.edge = function() {
-    if (this.x <= 20 && keyIsDown(65) || this.x >= width - 45 && keyIsDown(68)) {
-      this.speed = 0;
+    if (this.x <= 20 || this.x >= width - 45) {
+      this.speed = -1;
     }
 
+    if (this.x <= 15) {
+      this.x = 20;
+    }
+
+    if (this.x >= width - 43) {
+      this.x = width - 45;
+    }
   }
 
   this.playerTouch = function() {
@@ -115,11 +123,11 @@ function playDev() {
 
 
 function keyPressed() {
-  if ( player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
+  if (player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
     player.jump();
   }
 
-  if ( player.playerTouch() === true && keyCode === 87) {
+  if (player.playerTouch() === true && keyCode === 87) {
     player.jump();
   }
 
