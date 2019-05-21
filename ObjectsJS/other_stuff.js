@@ -60,7 +60,7 @@ function Player() {
 
   }
 
-  th is.rightMovement = function() {
+  this.rightMovement = function() {
     this.x += this.speed;
     if (keyIsDown(68)) {
       this.speed += 0.1;
