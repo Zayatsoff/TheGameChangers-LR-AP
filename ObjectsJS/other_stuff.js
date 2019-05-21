@@ -34,8 +34,12 @@ function Player() {
   this.jumpForce = -15;
   this.speed = 4;
 
+  this.r1 = random(0,255)
+  this.r2 = random(0,255)
+  this.r3 = random(0,255)
+
   this.display = function() {
-    fill(122, 255, 0, 80);
+    fill(this.r1,this.r2, this.r3, 80);
     stroke(255)
     strokeWeight(2)
     rect(this.x, this.y, 30, -50);
