@@ -1,3 +1,4 @@
+//////////////////////////////
 function Confetti() {
   this.x = random(0, 550);
   this.y = random(-100, 500);
@@ -24,7 +25,7 @@ function Confetti() {
     }
   }
 }
-
+//////////////////////////////
 function Player() {
   this.y = height - 20;
   this.x = width / 2;
@@ -77,10 +78,9 @@ function Player() {
     this.x -= this.speed;
     if (keyIsDown(65)) {
       this.speed += 0.2;
-
     }
   }
-  // && keyIsDown(65)?
+
   this.edge = function() {
     if (this.x <= 20 || this.x >= width - 45) {
       this.speed = -1;
@@ -103,9 +103,7 @@ function Player() {
     }
   }
 }
-
-
-
+//////////////////////////////
 function playDev() {
   this.rgb1 = player.x / 3;
   this.rgb2 = player.y / 3;
@@ -123,26 +121,64 @@ function playDev() {
   }
   player.edge();
 }
-
-
-
+//////////////////////////////
 function keyPressed() {
   if (player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
     player.jump();
   }
-
   if (player.playerTouch() === true && keyCode === 87) {
     player.jump();
   }
-
-
 }
-
+//////////////////////////////
 function backgroundColour() {
   if (bgColour === 1) {
     background(mouseX - 100, mouseY - 100, 200);
   } else {
     image(bgIMG, -30, 0, 800, 600);
-
   }
 }
+//////////////////////////////
+function Leaf() {
+this.x = random(-100,width);
+this.y = random(-100,height);
+this.w = random(5,10);
+this.h = random(2,7);
+this.alpha = 255;
+this.g = random(100,255)
+this.time= 100;
+this.addY = random(2,5)
+this.addX = random(1,2)
+
+this.display = function() {
+  noStroke();
+  fill(50,this.g,0,this.alpha*(this.time/100));
+  ellipse(this.x,this.y,this.w,this.h);
+}
+
+this.update = function(){
+  this.time--
+  if (this.x >= width) {
+  this.x = random(0,width);
+  this.time = 100;
+  }
+  if (this.y >= height) {
+  this.y = random(0,height);
+  this.time = 100;
+  }
+}
+
+this.edge = function() {
+this.x += this.addX;
+  this.y += this.addY;
+}
+}
+//////////////////////////////
+function LeafsFalling() {
+  for (var i = 0; i <= numLeaf; i++) {
+  leaf[i].display();
+    leaf[i].update();
+    leaf[i].edge();
+  }
+}
+//////////////////////////////

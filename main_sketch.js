@@ -7,6 +7,8 @@ var SceneNum = 0;
 var player;
 var keyUsed = 0;
 var bgColour;
+var leaf = [];
+var numLeaf = 100;
 
 
 function preload() {
@@ -22,9 +24,13 @@ function setup() {
     confet[i] = new Confetti();
   }
   player = new Player();
+  for (var i = 0; i <= numLeaf; i++) {
+      leaf[i] = new Leaf();
+    }
 }
 
 function draw() {
+
   //Menu
   if (SceneNum === 1) {
     aksMenu();
@@ -50,7 +56,6 @@ function draw() {
   else if (SceneNum === 8) {
     aksSettings();
   }
-
   //Splash
   else {
     push();
@@ -61,7 +66,6 @@ function draw() {
       aksMenu();
     }
   }
-
   //Cofetti
   // aksCorrect();
   // for (var i = 0; i < 500; i++) {
