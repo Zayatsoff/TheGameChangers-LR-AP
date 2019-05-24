@@ -9,7 +9,6 @@ function Confetti() {
   this.rgb3 = random(0, 255);
   this.speed = random(-10, 20);
 
-
   this.display = function() {
     noStroke();
     fill(this.rgb1, this.rgb2, this.rgb3);
@@ -77,21 +76,27 @@ function Player() {
   this.leftMovement = function() {
     this.x -= this.speed;
     if (keyIsDown(65)) {
-      this.speed += 0.2;
+      this.speed += 0.1;
+    } else {
+      this.speed = 4
     }
   }
 
   this.edge = function() {
-    if (this.x <= 20 || this.x >= width - 45) {
-      this.speed = -1;
+    if (this.x <= 20) {
+      this.speed = -1.5;
+    }
+
+    if (this.x >= width - 40) {
+      this.speed = -1.5;
     }
 
     if (this.x <= 15) {
       this.x = 20;
     }
 
-    if (this.x >= width - 43) {
-      this.x = width - 45;
+    if (this.x >= width - 35) {
+      this.x = width - 40;
     }
   }
 
