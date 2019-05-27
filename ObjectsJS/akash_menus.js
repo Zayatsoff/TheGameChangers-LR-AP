@@ -123,7 +123,7 @@ function aksSettings() {
   text("?", 310, 105);
 
 
-  //blue
+  //normal
   fill(255)
   rect(385, 80, 110, 30, 8);
   fill(0, 0, 255);
@@ -147,7 +147,7 @@ function aksSettings() {
   fill(255, 255, 255);
   rect(310, 175, 130, 30, 6);
   fill(0, 0, 255);
-  text("Not easy", 315, 200);
+  text("Hard", 315, 200);
 
   //backButton
   fill(255);
