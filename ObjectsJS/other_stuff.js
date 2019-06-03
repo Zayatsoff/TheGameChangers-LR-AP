@@ -83,11 +83,11 @@ function Player() {
   }
 
   this.edge = function() {
-    if (this.x <= 20) {
+    if (this.x <= 15) {
       this.speed = -1.5;
     }
 
-    if (this.x >= width - 40) {
+    if (this.x >= width - 30) {
       this.speed = -1.5;
     }
 
