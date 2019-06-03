@@ -36,6 +36,13 @@ function aksMenu() {
   textSize(40);
   fill(255, 0, 0);
   text("Play!", 215, 360);
+
+  //logo
+  fill(0);
+  textSize(10);
+  text('Made by', width - 115,320);
+  image(gameLogo,width - 100,300,100,100);
+  fill(255, 0, 0);
 }
 
 

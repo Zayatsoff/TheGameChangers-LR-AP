@@ -12,6 +12,7 @@ var numLeaf = 100;
 
 
 function preload() {
+gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
 }
 

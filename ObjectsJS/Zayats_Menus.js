@@ -26,7 +26,9 @@ class Splash {
     fill(0);
     textAlign(CENTER);
     text('Press "Space" to start', this.x, this.y + 60);
-
+    textSize(10);
+    text('Made by', width - 100,320);
+    image(gameLogo,width - 100,300,100,100);
   }
   update() {
     SceneNum = 0;
