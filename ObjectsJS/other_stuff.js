@@ -110,19 +110,7 @@ function Player() {
 }
 //////////////////////////////
 function playDev() {
-    translate(0,-player.y)
-  drawPlatform(200,600);
-  drawPlatform(400,400);
-  drawPlatform(50,200);
-  drawPlatform(100,00);
-  drawPlatform(5, 300);
-  drawPlatform(200,-300);
-  drawPlatform(100,-600);
-  drawPlatform(400,-900);
-  drawPlatform(0,-1200);
-  drawPlatform(200,-1500);
-  drawPlatform(100,-1800);
-  drawPlatform(200,-3500);
+
   this.rgb1 = player.x / 3;
   this.rgb2 = player.y / 3;
 
@@ -140,10 +128,6 @@ function playDev() {
   player.edge();
 }
 
-//platforms
-function  drawPlatform (x,y) {
-  fill(255)
-   rect(x, y, 150, 10, 6);
 
 
 }
