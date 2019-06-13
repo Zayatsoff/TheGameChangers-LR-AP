@@ -110,7 +110,7 @@ function Player() {
 }
 //////////////////////////////
 function playDev() {
-    translate(0,-player.y)
+  
   drawPlatform(200,600);
   drawPlatform(400,400);
   drawPlatform(50,200);
