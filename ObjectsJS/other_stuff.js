@@ -34,12 +34,12 @@ function Player() {
   this.jumpForce = -15;
   this.speed = 4;
 
-  this.r1 = random(0,255)
-  this.r2 = random(0,255)
-  this.r3 = random(0,255)
+  this.r1 = random(0, 255)
+  this.r2 = random(0, 255)
+  this.r3 = random(0, 255)
 
   this.display = function() {
-    fill(this.r1,this.r2, this.r3, 80);
+    fill(this.r1, this.r2, this.r3, 80);
     stroke(255)
     strokeWeight(2)
     rect(this.x, this.y, 30, -50);
@@ -110,25 +110,17 @@ function Player() {
 }
 //////////////////////////////
 function playDev() {
-  
-  drawPlatform(200,600);
-  drawPlatform(400,400);
-  drawPlatform(50,200);
-  drawPlatform(100,00);
-  drawPlatform(5, 300);
-  drawPlatform(200,-300);
-  drawPlatform(100,-600);
-  drawPlatform(400,-900);
-  drawPlatform(0,-1200);
-  drawPlatform(200,-1500);
-  drawPlatform(100,-1800);
-  drawPlatform(200,-3500);
+  background(this.rgb1, 53, this.rgb2);
+  fill(0, 0, 0, 90);
+  rect(0, height, width, -50000)
+  push();
+  translate(0, -player.y + height - player.h * 2);
+
   this.rgb1 = player.x / 3;
   this.rgb2 = player.y / 3;
 
-  background(this.rgb1, 53, this.rgb2);
-  fill(0, 0, 0, 90);
-  rect(0, 0, width, height)
+
+
   player.display();
   player.update();
   if (keyIsDown(68)) {
@@ -137,23 +129,25 @@ function playDev() {
   if (keyIsDown(65)) {
     player.leftMovement();
   }
-  player.edge();
-}
 
-//platforms
-function  drawPlatform (x,y) {
-  fill(255)
-   rect(x, y, 150, 10, 6);
+
+  for (var i = 0; i < plat.length; i++) {
+    plat[i].display();
+    player.onPlat(i);
+  }
+  ground.display();
+
 
 
 }
 //////////////////////////////
 function keyPressed() {
-  if (player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
+  if (keyCode === 87 && player.jumped === false) {
     player.jump();
+    player.jumped = true;
   }
-  if (player.playerTouch() === true && keyCode === 87) {
-    player.jump();
+  if (player.velocity >= 0) {
+    player.jumped = false;
   }
 }
 //////////////////////////////
@@ -166,43 +160,43 @@ function backgroundColour() {
 }
 //////////////////////////////
 function Leaf() {
-this.x = random(-100,width);
-this.y = random(-100,height);
-this.w = random(5,10);
-this.h = random(2,7);
-this.alpha = 255;
-this.g = random(100,255)
-this.time= 100;
-this.addY = random(2,5)
-this.addX = random(1,2)
-
-this.display = function() {
-  noStroke();
-  fill(50,this.g,0,this.alpha*(this.time/100));
-  ellipse(this.x,this.y,this.w,this.h);
-}
-
-this.update = function(){
-  this.time--
-  if (this.x >= width) {
-  this.x = random(0,width);
+  this.x = random(-100, width);
+  this.y = random(-100, height);
+  this.w = random(5, 10);
+  this.h = random(2, 7);
+  this.alpha = 255;
+  this.g = random(100, 255)
   this.time = 100;
-  }
-  if (this.y >= height) {
-  this.y = random(0,height);
-  this.time = 100;
-  }
-}
+  this.addY = random(2, 5)
+  this.addX = random(1, 2)
 
-this.edge = function() {
-this.x += this.addX;
-  this.y += this.addY;
-}
+  this.display = function() {
+    noStroke();
+    fill(50, this.g, 0, this.alpha * (this.time / 100));
+    ellipse(this.x, this.y, this.w, this.h);
+  }
+
+  this.update = function() {
+    this.time--
+    if (this.x >= width) {
+      this.x = random(0, width);
+      this.time = 100;
+    }
+    if (this.y >= height) {
+      this.y = random(0, height);
+      this.time = 100;
+    }
+  }
+
+  this.edge = function() {
+    this.x += this.addX;
+    this.y += this.addY;
+  }
 }
 //////////////////////////////
 function LeafsFalling() {
   for (var i = 0; i <= numLeaf; i++) {
-  leaf[i].display();
+    leaf[i].display();
     leaf[i].update();
     leaf[i].edge();
   }

@@ -9,10 +9,10 @@ var keyUsed = 0;
 var bgColour;
 var leaf = [];
 var numLeaf = 100;
-
+var plat = [];
 
 function preload() {
-gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
+  gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
 }
 
@@ -26,12 +26,16 @@ function setup() {
   }
   player = new Player();
   for (var i = 0; i <= numLeaf; i++) {
-      leaf[i] = new Leaf();
-    }
+    leaf[i] = new Leaf();
+  }
+
+  for (var i = 0; i <= 100; i++) {
+    plat[i] = new Plat(i);
+  }
+  ground = new Ground();
 }
 
 function draw() {
-
   //Menu
   if (SceneNum === 1) {
     aksMenu();
@@ -128,13 +132,13 @@ function mouseClicked() {
   }
 
   //Settings : Easy
-  else if (SceneNum === 8 && mouseX >= 210 && mouseX <= 280 && mouseY >= 175 && mouseY <= 175+30) {
+  else if (SceneNum === 8 && mouseX >= 210 && mouseX <= 280 && mouseY >= 175 && mouseY <= 175 + 30) {
     aksMenu();
     SceneNum = 1;
   }
 
   //Settings : Hard
-  else if (SceneNum === 8 && mouseX >= 310 && mouseX <= 440 && mouseY >= 175 && mouseY <= 175+30) {
+  else if (SceneNum === 8 && mouseX >= 310 && mouseX <= 440 && mouseY >= 175 && mouseY <= 175 + 30) {
     aksMenu();
     background(255);
     SceneNum = 1;
@@ -143,11 +147,11 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-  if (SceneNum === 7  && player.y > height - 21 && player.playerTouch() === false && keyCode === 87 ) {
+  if (SceneNum === 7 && player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
     player.jump();
   }
 
-  if (SceneNum === 7  && player.playerTouch() === true && keyCode === 87) {
+  if (SceneNum === 7 && player.playerTouch() === true && keyCode === 87) {
     player.jump();
   }
 
