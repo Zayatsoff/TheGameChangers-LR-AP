@@ -11,6 +11,8 @@ var leaf = [];
 var numLeaf = 100;
 var plat = [];
 
+
+
 function preload() {
   gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
@@ -32,7 +34,9 @@ function setup() {
   for (var i = 0; i <= 100; i++) {
     plat[i] = new Plat(i);
   }
-  ground = new Ground();
+
+  player = new Player();
+  ground = new Ground(); 
 }
 
 function draw() {
@@ -93,7 +97,7 @@ function mouseClicked() {
   //Open Play screen from Menu
   else if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
     aksPlayScreen();
-    SceneNum = 3;
+    SceneNum = 7;
   } else if (SceneNum === 1 && mouseX >= 15 && mouseX <= 135 && mouseY >= 205 - 5 && mouseY <= 235) {
     aksAboutUs();
     SceneNum = 6;
@@ -147,13 +151,11 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-  if (SceneNum === 7 && player.y > height - 21 && player.playerTouch() === false && keyCode === 87) {
-    player.jump();
-  }
-
-  if (SceneNum === 7 && player.playerTouch() === true && keyCode === 87) {
-    player.jump();
-  }
-
-
-}
+   if (keyCode === 87 && player.jumped === false) {
+     player.jump();
+     player.jumped = true;
+   }
+   if ( player.velocity >= 0) {
+     player.jumped = false;
+   }
+ }
