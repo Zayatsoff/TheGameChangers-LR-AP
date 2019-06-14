@@ -29,46 +29,44 @@ function Confetti() {
 function playDev() {
 
 
-   background(this.rgb1, 53, this.rgb2);
-   fill(0, 0, 0, 90);
-   rect(0, height, width, -50000)
-   push();
-   translate(0, -player.y + height - player.h * 2);
-
-   this.rgb1 = player.x / 3;
-   this.rgb2 = player.y / 3;
 
 
+  push();
+  translate(0, -player.y + height - player.h * 2);
+ image(level1bg,0,height-2870);
+ 
 
-   player.display();
-   player.update();
-   if (keyIsDown(68)) {
-     player.rightMovement();
-   }
-   if (keyIsDown(65)) {
-     player.leftMovement();
-   }
-
-
-   for (var i = 0; i < plat.length; i++) {
-     plat[i].display();
-     player.onPlat(i);
-   }
-ground.display();
+player.update();
 
 
 
- }
+  if (keyIsDown(68)) {
+    player.rightMovement();
+  }
+  if (keyIsDown(65)) {
+    player.leftMovement();
+  }
+
+
+  for (var i = 0; i < plat.length; i++) {
+    plat[i].display();
+    player.onPlat(i);
+  }
+
+
+player.display();
+
+}
 //////////////////////////////
 function keyPressed() {
-   if (keyCode === 87 && player.jumped === false) {
-     player.jump();
-     player.jumped = true;
-   }
-   if ( player.velocity >= 0) {
-     player.jumped = false;
-   }
- }
+  if (keyCode === 87 && player.jumped === false) {
+    player.jump();
+    player.jumped = true;
+  }
+  if (player.velocity >= 0) {
+    player.jumped = false;
+  }
+}
 //////////////////////////////
 function backgroundColour() {
   if (bgColour === 1) {

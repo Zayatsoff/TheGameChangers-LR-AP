@@ -16,6 +16,8 @@ var plat = [];
 function preload() {
   gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
+  char1 = loadImage('https://i.imgur.com/tF9LW7z.png')
+  level1bg = loadImage('https://i.imgur.com/d7raAv7.jpg')
 }
 
 function setup() {
@@ -36,7 +38,7 @@ function setup() {
   }
 
   player = new Player();
-  ground = new Ground(); 
+  ground = new Ground();
 }
 
 function draw() {
@@ -151,11 +153,11 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-   if (keyCode === 87 && player.jumped === false) {
-     player.jump();
-     player.jumped = true;
-   }
-   if ( player.velocity >= 0) {
-     player.jumped = false;
-   }
- }
+  if (keyCode === 87 && player.jumped === false) {
+    player.jump();
+    player.jumped = true;
+  }
+  if (player.velocity >= 0) {
+    player.jumped = false;
+  }
+}
