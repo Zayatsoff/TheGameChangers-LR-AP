@@ -1,7 +1,16 @@
 function aksMenu() {
   SceneNum = 1;
   backgroundColour();
+  
+function drawButton(x, y, words) {
+  fill(255)
+  rect(x, y, 70, 40, 6);
+  fill(0, 0, 0)
+  textAlign(LEFT, TOP)
+  textSize(15)
+  text(words, x + 15, y + 12);
 
+}
   //title
   stroke(2);
   textSize(73);
@@ -220,4 +229,21 @@ function aksAboutUs() {
   rect(30, 350, 60, 30, 6);
   fill(255, 0, 0);
   text("Back", 30, 373);
+}
+
+function aksLvl1Win() {
+  background(29, 214, 128)
+  textSize(50)
+  fill(0)
+  text("Congrats!!!",170,150)
+  
+  drawButton(75,300,"back")
+}
+
+function akslvl2Win() {
+  background(0, 221, 3)
+  textSize(50)
+text("YOU WIN!!!!!", 140,160)
+  
+  drawButton(75,300,"back")
 }
