@@ -33,8 +33,8 @@ function playDev() {
 
   push();
   translate(0, -player.y + height - player.h * 2);
- image(level1bg,0,height-2870);
- 
+ image(level1bg,0,height-3230);
+if (player.y <= -2680 ) {}
 
 player.update();
 
@@ -53,7 +53,7 @@ player.update();
     player.onPlat(i);
   }
 
-
+console.log(player.y);
 player.display();
 
 }
@@ -63,6 +63,10 @@ function keyPressed() {
     player.jump();
     player.jumped = true;
   }
+  if (SceneNum === 7 && keyCode === 75 ) {
+    player.y -= 200;
+  }
+
   if (player.velocity >= 0) {
     player.jumped = false;
   }

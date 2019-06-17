@@ -6,7 +6,7 @@ class Plat {
     this.y = 300 - i * 100;
   }
   display() {
-    fill(0);
+    fill(255);
     rect(this.x, this.y, this.w, this.h, 5)
   }
 

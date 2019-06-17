@@ -17,7 +17,7 @@ function preload() {
   gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
   char1 = loadImage('https://i.imgur.com/tF9LW7z.png')
-  level1bg = loadImage('https://i.imgur.com/d7raAv7.jpg')
+  level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg')
 }
 
 function setup() {
@@ -33,7 +33,7 @@ function setup() {
     leaf[i] = new Leaf();
   }
 
-  for (var i = 0; i <= 100; i++) {
+  for (var i = 0; i <= 26; i++) {
     plat[i] = new Plat(i);
   }
 
@@ -152,12 +152,17 @@ function mouseClicked() {
   }
 }
 
-function keyPressed() {
-  if (keyCode === 87 && player.jumped === false) {
-    player.jump();
-    player.jumped = true;
-  }
-  if (player.velocity >= 0) {
-    player.jumped = false;
-  }
-}
+// function keyPressed() {
+//   if (SceneNum === 7 && keyCode === 87 && player.jumped === false) {
+//     player.jump();
+//     player.jumped = true;
+//   }
+//
+//   if (SceneNum === 7 && keyCode === 75 ) {
+//     player.y *= 2;
+//   }
+//
+//   if (SceneNum === 7 && player.velocity >= 0) {
+//     player.jumped = false;
+//   }
+// }
