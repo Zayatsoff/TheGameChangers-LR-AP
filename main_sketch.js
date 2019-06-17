@@ -14,10 +14,11 @@ var plat = [];
 
 
 function preload() {
-  gameLogo = loadImage('https://i.imgur.com/G36MJb4.png')
+  gameLogo = loadImage('https://i.imgur.com/G36MJb4.png');
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
-  char1 = loadImage('https://i.imgur.com/tF9LW7z.png')
-  level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg')
+  char1 = loadImage('https://i.imgur.com/tF9LW7z.png');
+  char2 = loadImage('https://i.imgur.com/IuWv9Ll.png');
+  level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg');
 }
 
 function setup() {
@@ -42,7 +43,7 @@ function setup() {
 }
 
 function draw() {
-  //Menu
+   //Menu
   if (SceneNum === 1) {
     aksMenu();
   }
@@ -67,6 +68,10 @@ function draw() {
   else if (SceneNum === 8) {
     aksSettings();
   }
+// Win screen 1
+  else if (SceneNum === 9) {
+    aksLvl1Win();
+  }
   //Splash
   else {
     push();
@@ -77,14 +82,8 @@ function draw() {
       aksMenu();
     }
   }
-  //Cofetti
-  // aksCorrect();
-  // for (var i = 0; i < 500; i++) {
-  //   confet[i].display();
-  //   confet[i].update();
-  // }
-}
 
+}
 function mouseClicked() {
   //Open Instructions from Menu
   if (SceneNum === 1 && mouseX >= 180 && mouseX <= 335 && mouseY >= 255 && mouseY <= 295) {

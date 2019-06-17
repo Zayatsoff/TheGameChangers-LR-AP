@@ -1,7 +1,3 @@
-function aksMenu() {
-  SceneNum = 1;
-  backgroundColour();
-  
 function drawButton(x, y, words) {
   fill(255)
   rect(x, y, 70, 40, 6);
@@ -9,8 +5,13 @@ function drawButton(x, y, words) {
   textAlign(LEFT, TOP)
   textSize(15)
   text(words, x + 15, y + 12);
-
 }
+
+function aksMenu() {
+  SceneNum = 1;
+  backgroundColour();
+
+
   //title
   stroke(2);
   textSize(73);
@@ -232,18 +233,25 @@ function aksAboutUs() {
 }
 
 function aksLvl1Win() {
+  pop();
+  SceneNum =9;
   background(29, 214, 128)
   textSize(50)
   fill(0)
   text("Congrats!!!",170,150)
-  
-  drawButton(75,300,"back")
+  //Cofetti
+
+  for (var i = 0; i < 500; i++) {
+    confet[i].display();
+    confet[i].update();
+  }
+  drawButton(width/2 - 30,300,"Go on")
 }
 
 function akslvl2Win() {
   background(0, 221, 3)
   textSize(50)
 text("YOU WIN!!!!!", 140,160)
-  
+
   drawButton(75,300,"back")
 }
