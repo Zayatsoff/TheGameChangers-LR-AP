@@ -1,5 +1,11 @@
 // keyCodes: http://keycode.info/
-
+function preload() {
+  gameLogo = loadImage('https://i.imgur.com/G36MJb4.png');
+  bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
+  char1 = loadImage('https://i.imgur.com/tF9LW7z.png');
+  char2 = loadImage('https://i.imgur.com/IuWv9Ll.png');
+  level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg');
+}
 //Variables
 let splash;
 var confet = [];
@@ -10,16 +16,10 @@ var bgColour;
 var leaf = [];
 var numLeaf = 100;
 var plat = [];
+var OurChar = char1;
 
 
 
-function preload() {
-  gameLogo = loadImage('https://i.imgur.com/G36MJb4.png');
-  bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
-  char1 = loadImage('https://i.imgur.com/tF9LW7z.png');
-  char2 = loadImage('https://i.imgur.com/IuWv9Ll.png');
-  level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg');
-}
 
 function setup() {
   createCanvas(550, 400);
@@ -43,7 +43,8 @@ function setup() {
 }
 
 function draw() {
-   //Menu
+  
+  //Menu
   if (SceneNum === 1) {
     aksMenu();
   }
@@ -68,7 +69,7 @@ function draw() {
   else if (SceneNum === 8) {
     aksSettings();
   }
-// Win screen 1
+  // Win screen 1
   else if (SceneNum === 9) {
     aksLvl1Win();
   }
@@ -84,6 +85,7 @@ function draw() {
   }
 
 }
+
 function mouseClicked() {
   //Open Instructions from Menu
   if (SceneNum === 1 && mouseX >= 180 && mouseX <= 335 && mouseY >= 255 && mouseY <= 295) {
@@ -98,7 +100,7 @@ function mouseClicked() {
   //Open Play screen from Menu
   else if (SceneNum === 1 && mouseX >= 215 && mouseX <= 385 && mouseY >= 330 && mouseY <= 370) {
     aksPlayScreen();
-    SceneNum = 7;
+    SceneNum = 3;
   } else if (SceneNum === 1 && mouseX >= 15 && mouseX <= 135 && mouseY >= 205 - 5 && mouseY <= 235) {
     aksAboutUs();
     SceneNum = 6;
@@ -149,8 +151,14 @@ function mouseClicked() {
     SceneNum = 1;
 
   }
+// Char select
+  else if(SceneNum === 3 && mouseX >= 125 && mouseX <= 205 && mouseY >=120 && mouseY <= 240) {
+OurChar = char1;
 }
-
+else if(SceneNum === 3 && mouseX >= 325 && mouseX <= 405 && mouseY >=120 && mouseY <= 240) {
+OurChar = char2;
+}
+}
 // function keyPressed() {
 //   if (SceneNum === 7 && keyCode === 87 && player.jumped === false) {
 //     player.jump();

@@ -50,11 +50,10 @@ function aksMenu() {
   //logo
   fill(0);
   textSize(10);
-  text('Made by', width - 115,320);
-  image(gameLogo,width - 100,300,100,100);
+  text('Made by', width - 115, 320);
+  image(gameLogo, width - 100, 300, 100, 100);
   fill(255, 0, 0);
 }
-
 
 
 
@@ -102,15 +101,20 @@ function aksInstructions() {
 
 function aksPlayScreen() {
   SceneNum = 3;
+
   background(55, 156, 229);
 
   textSize(45);
   text("Choose your character", 45, 50)
 
   //where the character drawings will go
+  fill(255);
   rect(125, 120, 80, 120, 6);
-  rect(325, 120, 80, 120, 6);
 
+  rect(325, 120, 80, 120, 6);
+  image(char1, 115, 140, 100, 100);
+  image(char2, 295, 120, 130, 130);
+  fill(255, 0, 0);
   //begin
   textSize(60);
   text("Play!", 200, 350);
@@ -234,24 +238,24 @@ function aksAboutUs() {
 
 function aksLvl1Win() {
   pop();
-  SceneNum =9;
+  SceneNum = 9;
   background(29, 214, 128)
   textSize(50)
   fill(0)
-  text("Congrats!!!",170,150)
+  text("Congrats!!!", 170, 150)
   //Cofetti
 
   for (var i = 0; i < 500; i++) {
     confet[i].display();
     confet[i].update();
   }
-  drawButton(width/2 - 30,300,"Go on")
+  drawButton(width / 2 - 30, 300, "Go on")
 }
 
 function akslvl2Win() {
   background(0, 221, 3)
   textSize(50)
-text("YOU WIN!!!!!", 140,160)
+  text("YOU WIN!!!!!", 140, 160)
 
-  drawButton(75,300,"back")
+  drawButton(75, 300, "back")
 }
