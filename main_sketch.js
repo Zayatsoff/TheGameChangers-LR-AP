@@ -175,8 +175,41 @@ function mouseClicked() {
   // Char select
   else if (SceneNum === 3 && mouseX >= 125 && mouseX <= 205 && mouseY >= 120 && mouseY <= 240) {
     OurChar = char1;
+    console.log(OurChar);
   } else if (SceneNum === 3 && mouseX >= 325 && mouseX <= 405 && mouseY >= 120 && mouseY <= 240) {
     OurChar = char2;
+    console.log(OurChar);
+
+    //addition
+    if (sceneNum === 1 && mouseX <= 183 && mouseX >= 113 && mouseY >= 200 && mouseY <= 240) {
+      sceneNum += 3
+      Correct()
+    } else if (sceneNum === 1 && mouseX <= 325 && mouseX >= 256 && mouseY <= 240 && mouseY > 200) {
+      Wrong()
+    } else if (sceneNum === 1 && mouseY >= 200 && mouseY <= 240 && mouseX >= 399 && mouseX <= 469) {
+      Wrong()
+    }
+
+    // subtraction
+    else if (sceneNum === 2 && mouseX <= 183 && mouseX >= 113 && mouseY >= 200 && mouseY <= 240) {
+      sceneNum += 3
+      Wrong()
+    } else if (sceneNum === 2 && mouseX <= 325 && mouseX >= 256 && mouseY <= 240 && mouseY > 200) {
+      Correct()
+    } else if (sceneNum === 2 && mouseY >= 200 && mouseY <= 240 && mouseX >= 399 && mouseX <= 469) {
+      Wrong()
+    }
+
+    // multiplication
+    else if (sceneNum === 3 && mouseX <= 183 && mouseX >= 113 && mouseY >= 200 && mouseY <= 240) {
+      sceneNum += 3
+      Wrong()
+    } else if (sceneNum === 3 && mouseX <= 325 && mouseX >= 256 && mouseY <= 240 && mouseY > 200) {
+      Wrong()
+    } else if (sceneNum === 3 && mouseY >= 200 && mouseY <= 240 && mouseX >= 399 && mouseX <= 469) {
+      Correct()
+    }
+
   }
 
   // From win to next level
