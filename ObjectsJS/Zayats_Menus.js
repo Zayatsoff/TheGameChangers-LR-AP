@@ -99,7 +99,7 @@ function playDev2() {
 
   for (var i = 0; i < plat.length; i++) {
     plat[i].display();
-    player.onPlat(i);
+    player.Collide(i);
   }
 
 
