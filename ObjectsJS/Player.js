@@ -94,13 +94,22 @@ class Player {
   //   }
   // }
 
-  Collide(i) {
+  CollidePlat(i) {
     var collidePlat = collideRectRect(this.x, this.y, this.w, this.h, plat[i].x, plat[i].y, plat[i].w, plat[i].h - this.h);
-    // var collideCoin = collideRectRect(this.x, this.y, this.w, this.h, coin[i].x, coin[i].y, coin[i].r, coin[i].r );
     if (collidePlat) {
       this.velocity = 0;
       this.y = plat[i].y - this.h;
     }
+
+  }
+
+  CollideCoin(i) {
+    var collideCoin = collideRectRect(this.x, this.y, this.w, this.h, coin[i].x, coin[i].y, coin[i].r, coin[i].r );
+
+    if (collideCoin) {
+      coin[i].constructor.visible = false;
+    }
+
   }
 }
 //////////////////////////////

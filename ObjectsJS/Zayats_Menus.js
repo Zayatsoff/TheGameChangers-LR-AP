@@ -63,7 +63,11 @@ function playDev() {
 
   for (var i = 0; i < plat.length; i++) {
     plat[i].display();
-    player.Collide(i);
+  player.CollidePlat(i);
+  }
+  for (var i = 0; i < coin.length; i++) {
+
+    player.CollideCoin(i);
   }
 
   for (var i = 0; i < coin.length; i++) {
@@ -99,9 +103,12 @@ function playDev2() {
 
   for (var i = 0; i < plat.length; i++) {
     plat[i].display();
-    player.Collide(i);
+player.CollidePlat(i);
   }
+  for (var i = 0; i < coin.length; i++) {
 
+    player.CollideCoin(i);
+  }
 
   player.display();
 
