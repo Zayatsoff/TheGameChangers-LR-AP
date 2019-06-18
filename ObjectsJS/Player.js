@@ -19,12 +19,8 @@ class Player {
 
   }
   display() {
-    // fill(this.r1, this.r2, this.r3, 80);
-    // stroke(255)
-    // strokeWeight(2)
-    // rect(this.x, this.y, this.w, this.h);
 
-  image(char1,this.x,this.y,this.w,this.h)
+  image(OurChar,this.x,this.y,this.w,this.h)
   }
 
   jump() {
