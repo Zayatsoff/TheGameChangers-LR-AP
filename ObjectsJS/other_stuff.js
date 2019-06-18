@@ -25,51 +25,7 @@ function Confetti() {
   }
 }
 //////////////////////////////
-//////////////////////////////
-function playDev() {
-  push();
-  translate(0, -player.y + height - player.h * 2);
- image(level1bg,0,height-3230);
-if (player.y <= -2580) {
-  SceneNum = 9;
-  aksLvl1Win();
-}
 
-player.update();
-
-
-
-  if (keyIsDown(68)) {
-    player.rightMovement();
-  }
-  if (keyIsDown(65)) {
-    player.leftMovement();
-  }
-
-
-  for (var i = 0; i < plat.length; i++) {
-    plat[i].display();
-    player.onPlat(i);
-  }
-
-
-player.display();
-
-}
-//////////////////////////////
-function keyPressed() {
-  if (keyCode === 87 && player.jumped === false) {
-    player.jump();
-    player.jumped = true;
-  }
-  if (SceneNum === 7 && keyCode === 75 ) {
-    player.y -= 200;
-  }
-
-  if (player.velocity >= 0) {
-    player.jumped = false;
-  }
-}
 //////////////////////////////
 function backgroundColour() {
   if (bgColour === 1) {

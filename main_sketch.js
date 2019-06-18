@@ -16,7 +16,7 @@ var bgColour;
 var leaf = [];
 var numLeaf = 100;
 var plat = [];
-var OurChar = char1;
+let OurChar = null;
 
 
 
@@ -43,7 +43,7 @@ function setup() {
 }
 
 function draw() {
-  
+
   //Menu
   if (SceneNum === 1) {
     aksMenu();
@@ -64,14 +64,21 @@ function draw() {
   else if (SceneNum === 7) {
     playDev();
   }
+  else if (SceneNum === 10) {
+    playDev2();
+  }
 
   //Settings
   else if (SceneNum === 8) {
     aksSettings();
   }
-  // Win screen 1
+  // Win screens
   else if (SceneNum === 9) {
     aksLvl1Win();
+
+  }
+  else if (SceneNum === 11) {
+    akslvl2Win();
   }
   //Splash
   else {
@@ -158,7 +165,17 @@ OurChar = char1;
 else if(SceneNum === 3 && mouseX >= 325 && mouseX <= 405 && mouseY >=120 && mouseY <= 240) {
 OurChar = char2;
 }
+
+// From win to next level
+else if(SceneNum === 9 && mouseX >= width / 2 - 30 && mouseX <= (width / 2 - 30)+70 && mouseY >=300  && mouseY <= 340) {
+player.y = height - player.h;
+player.x = width / 2;
+  playDev2();
+  SceneNum = 10;
+
 }
+}
+
 // function keyPressed() {
 //   if (SceneNum === 7 && keyCode === 87 && player.jumped === false) {
 //     player.jump();

@@ -20,7 +20,7 @@ class Player {
   }
   display() {
 
-  image(OurChar,this.x,this.y,this.w,this.h)
+    image(OurChar, this.x, this.y, this.w, this.h)
   }
 
   jump() {

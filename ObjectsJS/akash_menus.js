@@ -253,9 +253,15 @@ function aksLvl1Win() {
 }
 
 function akslvl2Win() {
+  SceneNum = 11;
+
+  pop();
   background(0, 221, 3)
   textSize(50)
   text("YOU WIN!!!!!", 140, 160)
-
-  drawButton(75, 300, "back")
+  for (var i = 0; i < 500; i++) {
+    confet[i].display();
+    confet[i].update();
+  }
+  drawButton(width / 2 - 30, 300, "Go on")
 }
