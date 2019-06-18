@@ -29,7 +29,7 @@ var numLeaf = 100;
 var plat = [];
 let OurChar = null;
 var coin = [];
-
+var money = 0;
 
 
 

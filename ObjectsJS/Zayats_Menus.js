@@ -76,7 +76,10 @@ function playDev() {
 
 
   player.display();
-
+  pop();
+  fill(0);
+textSize(20)
+text(money + "$",30,height - 30)
 }
 /////////////////////////////////
 function playDev2() {

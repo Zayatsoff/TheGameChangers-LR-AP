@@ -104,10 +104,11 @@ class Player {
   }
 
   CollideCoin(i) {
-    var collideCoin = collideRectRect(this.x, this.y, this.w, this.h, coin[i].x, coin[i].y, coin[i].r, coin[i].r );
+    var collideCoin = collideRectRect(this.x, this.y, this.w, this.h, coin[i].x, coin[i].y, coin[i].r-20, coin[i].r-20);
 
     if (collideCoin) {
-      coin[i].constructor.visible = false;
+      coin[i].visible = false;
+      money += coin[i].price = 100;
     }
 
   }
