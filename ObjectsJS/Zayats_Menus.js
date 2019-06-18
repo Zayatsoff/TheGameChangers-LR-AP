@@ -27,8 +27,8 @@ class Splash {
     textAlign(CENTER);
     text('Press "Space" to start', this.x, this.y + 60);
     textSize(10);
-    text('Made by', width - 100,320);
-    image(gameLogo,width - 100,300,100,100);
+    text('Made by', width - 100, 320);
+    image(gameLogo, width - 100, 300, 100, 100);
   }
   update() {
     SceneNum = 0;
@@ -38,17 +38,18 @@ class Splash {
     }
   }
 }
+
 function playDev() {
   SceneNum = 7;
   push();
   translate(0, -player.y + height - player.h * 2);
- image(level1bg,0,height-3230);
-if (player.y <= -2580) {
-  SceneNum = 9;
-  aksLvl1Win();
-}
+  image(level1bg, 0, height - 3230);
+  if (player.y <= -2580) {
+    SceneNum = 9;
+    aksLvl1Win();
+  }
 
-player.update();
+  player.update();
 
 
 
@@ -62,11 +63,15 @@ player.update();
 
   for (var i = 0; i < plat.length; i++) {
     plat[i].display();
-    player.onPlat(i);
+    player.Collide(i);
+  }
+
+  for (var i = 0; i < coin.length; i++) {
+    coin[i].display();
   }
 
 
-player.display();
+  player.display();
 
 }
 /////////////////////////////////
@@ -74,13 +79,13 @@ function playDev2() {
   SceneNum = 10;
   push();
   translate(0, -player.y + height - player.h * 2);
- image(level2bg,0,height-3230);
-if (player.y <= -2580) {
-  SceneNum = 11;
-  akslvl2Win();
-}
+  image(level2bg, 0, height - 3230);
+  if (player.y <= -2580) {
+    SceneNum = 11;
+    akslvl2Win();
+  }
 
-player.update();
+  player.update();
 
 
 
@@ -98,7 +103,7 @@ player.update();
   }
 
 
-player.display();
+  player.display();
 
 }
 

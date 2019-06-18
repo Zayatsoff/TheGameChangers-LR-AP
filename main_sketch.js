@@ -6,6 +6,16 @@ function preload() {
   char2 = loadImage('https://i.imgur.com/IuWv9Ll.png');
   level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg');
   level2bg = loadImage('https://i.imgur.com/FgzAsGQ.jpg');
+  //10$
+  coin1 = loadImage('https://i.imgur.com/953ODrC.png');
+  //15$
+  coin2 = loadImage('https://i.imgur.com/Ez119et.png');
+  //20$
+  coin3 = loadImage('https://i.imgur.com/01TBZBQ.png');
+  //50$
+  coin4 = loadImage('https://i.imgur.com/FAT0qp7.png');
+  //100$
+  coin5 = loadImage('https://i.imgur.com/2KzYn6t.png');
 }
 //Variables
 let splash;
@@ -18,6 +28,7 @@ var leaf = [];
 var numLeaf = 100;
 var plat = [];
 let OurChar = null;
+var coin = [];
 
 
 
@@ -37,6 +48,10 @@ function setup() {
 
   for (var i = 0; i <= 26; i++) {
     plat[i] = new Plat(i);
+  }
+
+  for (var i = 0; i <= 10; i++) {
+    coin[i] = new Coin();
   }
 
   player = new Player();
@@ -64,8 +79,7 @@ function draw() {
   //Play
   else if (SceneNum === 7) {
     playDev();
-  }
-  else if (SceneNum === 10) {
+  } else if (SceneNum === 10) {
     playDev2();
   }
 
@@ -77,8 +91,7 @@ function draw() {
   else if (SceneNum === 9) {
     aksLvl1Win();
 
-  }
-  else if (SceneNum === 11) {
+  } else if (SceneNum === 11) {
     akslvl2Win();
   }
   //Splash
@@ -159,22 +172,21 @@ function mouseClicked() {
     SceneNum = 1;
 
   }
-// Char select
-  else if(SceneNum === 3 && mouseX >= 125 && mouseX <= 205 && mouseY >=120 && mouseY <= 240) {
-OurChar = char1;
-}
-else if(SceneNum === 3 && mouseX >= 325 && mouseX <= 405 && mouseY >=120 && mouseY <= 240) {
-OurChar = char2;
-}
+  // Char select
+  else if (SceneNum === 3 && mouseX >= 125 && mouseX <= 205 && mouseY >= 120 && mouseY <= 240) {
+    OurChar = char1;
+  } else if (SceneNum === 3 && mouseX >= 325 && mouseX <= 405 && mouseY >= 120 && mouseY <= 240) {
+    OurChar = char2;
+  }
 
-// From win to next level
-else if(SceneNum === 9 && mouseX >= width / 2 - 30 && mouseX <= (width / 2 - 30)+70 && mouseY >=300  && mouseY <= 340) {
-player.y = height - player.h;
-player.x = width / 2;
-  playDev2();
-  SceneNum = 10;
+  // From win to next level
+  else if (SceneNum === 9 && mouseX >= width / 2 - 30 && mouseX <= (width / 2 - 30) + 70 && mouseY >= 300 && mouseY <= 340) {
+    player.y = height - player.h;
+    player.x = width / 2;
+    playDev2();
+    SceneNum = 10;
 
-}
+  }
 }
 
 // function keyPressed() {
