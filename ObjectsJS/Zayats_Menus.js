@@ -69,11 +69,12 @@ player.update();
 player.display();
 
 }
+/////////////////////////////////
 function playDev2() {
   SceneNum = 10;
   push();
   translate(0, -player.y + height - player.h * 2);
- image(level1bg,0,height-3230);
+ image(level2bg,0,height-3230);
 if (player.y <= -2580) {
   SceneNum = 11;
   akslvl2Win();

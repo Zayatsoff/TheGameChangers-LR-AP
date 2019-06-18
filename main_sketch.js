@@ -5,6 +5,7 @@ function preload() {
   char1 = loadImage('https://i.imgur.com/tF9LW7z.png');
   char2 = loadImage('https://i.imgur.com/IuWv9Ll.png');
   level1bg = loadImage('https://i.imgur.com/jcSn7hc.jpg');
+  level2bg = loadImage('https://i.imgur.com/FgzAsGQ.jpg');
 }
 //Variables
 let splash;
