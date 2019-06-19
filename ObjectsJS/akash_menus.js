@@ -267,6 +267,7 @@ function akslvl2Win() {
 }
 
 function Questions() {
+  sceneNum = 20
   background(34, 229, 229)
   var type = round(random(1, 3))
   var randNum = round(random(1, 100))
