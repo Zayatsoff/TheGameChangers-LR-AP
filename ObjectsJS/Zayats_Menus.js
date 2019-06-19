@@ -45,6 +45,9 @@ function playDev() {
   translate(0, -player.y + height - player.h * 2);
   image(level1bg, 0, height - 3230);
   if (player.y <= -2580) {
+    sceneNum = 20;
+    questions.display()
+  }
     SceneNum = 9;
     aksLvl1Win();
   }
