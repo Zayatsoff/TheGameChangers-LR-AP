@@ -267,6 +267,7 @@ function akslvl2Win() {
 }
 
 function Questions() {
+  drawButton(50,300, "exit")
   sceneNum = 9
   background(34, 229, 229)
   var type = round(random(1, 3))
