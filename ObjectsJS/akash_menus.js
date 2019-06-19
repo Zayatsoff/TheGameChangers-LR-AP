@@ -267,7 +267,7 @@ function akslvl2Win() {
 }
 
 function Questions() {
-  sceneNum = 20
+  sceneNum = 9
   background(34, 229, 229)
   var type = round(random(1, 3))
   var randNum = round(random(1, 100))
@@ -299,7 +299,7 @@ function Questions() {
     text("choose the right answer to advance", 170, 10)
     //addition
     if (type === 1) {
-      sceneNum = 1
+      sceneNum = 10
       textSize(40)
       text(num1 + "+" + num2, 200, 100)
       drawButton(113, 200, this.addition)
@@ -310,7 +310,7 @@ function Questions() {
       //subtraction
 
     } else if (type === 2) {
-      sceneNum = 2
+      sceneNum = 11
       textSize(40)
       text(num3 + "-" + num4, 200, 100)
       drawButton(113, 200, numRand)
@@ -319,7 +319,7 @@ function Questions() {
 
       //multiplication
     } else if (type === 3) {
-      sceneNum = 3
+      sceneNum = 12
       textSize(40)
       text(num5 + "x" + num6, 200, 100)
       drawButton(113, 200, randNum + 9)
@@ -336,7 +336,7 @@ function Questions() {
 }
 
 function Correct() {
-  sceneNum = 4
+  sceneNum = 13
   textSize(50)
   background(26, 226, 0)
   text("Correct!", 200, 100)
@@ -344,7 +344,7 @@ function Correct() {
 }
 
 function Wrong() {
-  sceneNum = 5
+  sceneNum = 14
   background(255, 0, 0)
   textSize(50)
   text("Wrong!", 200, 100)
