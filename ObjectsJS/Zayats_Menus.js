@@ -46,7 +46,7 @@ function playDev() {
   image(level1bg, 0, height - 3230);
   if (player.y <= -2580){
     sceneNum = 9;
-    questions.display();
+    aksLvl1Win();
   }
 
   player.update();
