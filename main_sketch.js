@@ -37,7 +37,7 @@ var money = 0;
 
 
 function setup() {
-  questions = new Questions()
+  questions = new questions()
   createCanvas(550, 400);
   //splash screen
   splash = new Splash();
