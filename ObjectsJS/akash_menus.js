@@ -301,8 +301,8 @@ function Questions() {
   this.display = function() {
     text("choose the right answer to advance", 170, 10)
     //addition
-    if (type === 20) {
-      sceneNum = 10
+    if (type === 1) {
+      sceneNum = 1
       textSize(40)
       text(num1 + "+" + num2, 200, 100)
       drawButton(113, 200, this.addition)
@@ -313,7 +313,7 @@ function Questions() {
       //subtraction
 
     } else if (type === 2) {
-      sceneNum = 21
+      sceneNum = 2
       textSize(40)
       text(num3 + "-" + num4, 200, 100)
       drawButton(113, 200, numRand)
@@ -322,7 +322,7 @@ function Questions() {
 
       //multiplication
     } else if (type === 3) {
-      sceneNum = 22
+      sceneNum = 3
       textSize(40)
       text(num5 + "x" + num6, 200, 100)
       drawButton(113, 200, randNum + 9)
