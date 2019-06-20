@@ -211,7 +211,7 @@ function mouseClicked() {
     }
     
       //exit
-  else if (sceneNum === 1 || sceneNum === 2 || sceneNum ===3 && mouseX >= 40 && mouseX <= 120 && mouseY >= 300 && mouseY <= 340){
+  else if (sceneNum === 20 || sceneNum === 21 || sceneNum ===22 && mouseX >= 40 && mouseX <= 120 && mouseY >= 300 && mouseY <= 340){
   sceneNum = 1;
     aksMenu();
   }
