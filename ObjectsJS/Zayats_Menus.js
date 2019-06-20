@@ -9,6 +9,7 @@ class Splash {
   }
 
   show() {
+    translate(0,0)
     SceneNum = 0;
     background(220, 244, 240);
 

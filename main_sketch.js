@@ -97,6 +97,7 @@ function draw() {
   }
   //Splash
   else {
+    translate(0,0);
     push();
     splash.update();
     splash.show();
