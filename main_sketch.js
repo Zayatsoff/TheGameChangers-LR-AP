@@ -209,6 +209,13 @@ function mouseClicked() {
     } else if (sceneNum === 3 && mouseY >= 200 && mouseY <= 240 && mouseX >= 399 && mouseX <= 469) {
       Correct()
     }
+    
+      //exit
+  else if (sceneNum === 1 || sceneNum === 2 || sceneNum ===3 && mouseX >= 40 && mouseX <= 120 && mouseY >= 300 && mouseY <= 340){
+  sceneNum = 1;
+    aksMenu();
+  }
+    
 
   }
 
