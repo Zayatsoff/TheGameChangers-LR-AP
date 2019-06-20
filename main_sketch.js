@@ -34,7 +34,7 @@ var money = 0;
 
 
 function setup() {
-  questions = nem Questions();
+  questions = new Questions();
   createCanvas(550, 400);
   //splash screen
   splash = new Splash();
@@ -210,13 +210,13 @@ function mouseClicked() {
     } else if (sceneNum === 3 && mouseY >= 200 && mouseY <= 240 && mouseX >= 399 && mouseX <= 469) {
       Correct()
     }
-    
+
       //exit
   else if (sceneNum === 20 || sceneNum === 21 || sceneNum ===22 && mouseX >= 40 && mouseX <= 120 && mouseY >= 300 && mouseY <= 340){
   sceneNum = 1;
     aksMenu();
   }
-    
+
 
   }
 
