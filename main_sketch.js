@@ -183,7 +183,6 @@ function mouseClicked() {
   }
   /addition
   if (sceneNum === 1 && mouseX <= 183 && mouseX >= 113 && mouseY >= 200 && mouseY <= 240) {
-    sceneNum += 3
     Correct()
   } else if (sceneNum === 1 && mouseX <= 325 && mouseX >= 256 && mouseY <= 240 && mouseY > 200) {
     Wrong()
@@ -193,7 +192,6 @@ function mouseClicked() {
 
   // subtraction
   else if (sceneNum === 2 && mouseX <= 183 && mouseX >= 113 && mouseY >= 200 && mouseY <= 240) {
-    sceneNum += 3
     Wrong()
   } else if (sceneNum === 2 && mouseX <= 325 && mouseX >= 256 && mouseY <= 240 && mouseY > 200) {
     Correct()
