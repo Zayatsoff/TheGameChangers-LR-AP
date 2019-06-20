@@ -37,6 +37,7 @@ function setup() {
   createCanvas(550, 400);
   //splash screen
   splash = new Splash();
+  questions = new Questions();
   //confetti
   for (var i = 0; i < 500; i++) {
     confet[i] = new Confetti();

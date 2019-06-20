@@ -267,3 +267,90 @@ function akslvl2Win() {
   }
   drawButton(width / 2 - 30, 300, "Go on")
 }
+
+function Questions() {
+
+  drawButton(50, 300, "exit")
+  sceneNum = 9
+  background(34, 229, 229)
+  var type = round(random(1, 3))
+  var randNum = round(random(1, 100))
+  var numRand = round(random(7, 30))
+  // addition
+  var num1 = round(random(1, 50))
+  var num2 = round(random(1, 50))
+
+  //subtraction
+  var num3 = round(random(25, 50))
+  var num4 = round(random(0, 25))
+
+  //multiplication
+  var num5 = round(random(1, 7))
+  var num6 = round(random(1, 7))
+
+  if (type === 1) {
+    this.addition = num1 + num2
+
+  }
+  if (type === 2) {
+    this.subtraction = num3 - num4
+
+  } else {
+    this.multiplication = num5 * num6
+  }
+
+  this.display = function() {
+    text("choose the right answer to advance", 170, 10)
+    //addition
+    if (type === 1) {
+      sceneNum = 1
+      textSize(40)
+      text(num1 + "+" + num2, 200, 100)
+      drawButton(113, 200, this.addition)
+      drawButton(256, 200, randNum)
+      drawButton(399, 200, randNum)
+
+
+      //subtraction
+
+    } else if (type === 2) {
+      sceneNum = 2
+      textSize(40)
+      text(num3 + "-" + num4, 200, 100)
+      drawButton(113, 200, numRand)
+      drawButton(256, 200, this.subtraction)
+      drawButton(399, 200, numRand + round(randNum * 1.5))
+
+      //multiplication
+    } else if (type === 3) {
+      sceneNum = 3
+      textSize(40)
+      text(num5 + "x" + num6, 200, 100)
+      drawButton(113, 200, randNum + 9)
+      drawButton(256, 200, randNum)
+      drawButton(399, 200, this.multiplication)
+
+
+
+    }
+
+
+  }
+
+}
+
+function Correct() {
+  sceneNum = 13
+  textSize(50)
+  background(26, 226, 0)
+  text("Correct!", 200, 100)
+  drawButton(250, 250, "next")
+}
+
+function Wrong() {
+  sceneNum = 14
+  background(255, 0, 0)
+  textSize(50)
+  text("Wrong!", 200, 100)
+  drawButton(250, 250, "back")
+}

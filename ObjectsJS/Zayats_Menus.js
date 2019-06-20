@@ -51,6 +51,10 @@ function playDev() {
     aksLvl1Win();
   }
 
+  if (player.y <= -1000 && player.y >= -1005 ) {
+    questions.display();
+  }
+
 
   player.update();
 
