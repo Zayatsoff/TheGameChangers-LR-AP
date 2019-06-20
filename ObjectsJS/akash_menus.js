@@ -1,3 +1,5 @@
+var questions
+
 function drawButton(x, y, words) {
   fill(255)
   rect(x, y, 70, 40, 6);
