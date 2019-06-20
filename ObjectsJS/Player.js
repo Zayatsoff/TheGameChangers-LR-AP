@@ -108,7 +108,7 @@ class Player {
 
     if (collideCoin) {
       coin[i].visible = false;
-      money += coin[i].price = 100;
+      money += coin[i].price;
     }
 
   }

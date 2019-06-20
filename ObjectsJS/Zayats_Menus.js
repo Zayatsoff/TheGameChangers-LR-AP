@@ -9,7 +9,7 @@ class Splash {
   }
 
   show() {
-    translate(0,0)
+
     SceneNum = 0;
     background(220, 244, 240);
 
@@ -20,7 +20,7 @@ class Splash {
     //textFont(edunline);
     fill(0);
     textAlign(CENTER);
-    text('Jump or thump!', this.x, this.y);
+    text('Jump or thump!', this.x, this.y-105);
 
     textSize(this.spacebar);
     //textFont(edunline);
@@ -45,46 +45,38 @@ function playDev() {
   push();
   translate(0, -player.y + height - player.h * 2);
   image(level1bg, 0, height - 3230);
-  // if (player.y <= -2580) {
-  //
-  //   sceneNum = 20;
-  //   questions.display()
-  // }
-  SceneNum = 9;
-  aksLvl1Win();
+  if (player.y <= -2580) {
+    SceneNum = 9;
+    aksLvl1Win();
+  }
 
+  player.update();
 
-player.update();
+  if (keyIsDown(68)) {
+    player.rightMovement();
+  }
+  if (keyIsDown(65)) {
+    player.leftMovement();
+  }
 
+  for (var i = 0; i < plat.length; i++) {
+    plat[i].display();
+    player.CollidePlat(i);
+  }
+  for (var i = 0; i < coin.length; i++) {
 
+    player.CollideCoin(i);
+  }
 
-if (keyIsDown(68)) {
-  player.rightMovement();
-}
-if (keyIsDown(65)) {
-  player.leftMovement();
-}
+  for (var i = 0; i < coin.length; i++) {
+    coin[i].display();
+  }
 
-
-for (var i = 0; i < plat.length; i++) {
-  plat[i].display();
-  player.CollidePlat(i);
-}
-for (var i = 0; i < coin.length; i++) {
-
-  player.CollideCoin(i);
-}
-
-for (var i = 0; i < coin.length; i++) {
-  coin[i].display();
-}
-
-
-player.display();
-pop();
-fill(0);
-textSize(20)
-text(money + "$", 30, height - 30)
+  player.display();
+  pop();
+  fill(0);
+  textSize(20)
+  text(money + "$", 30, height - 30)
 }
 /////////////////////////////////
 function playDev2() {
@@ -100,26 +92,31 @@ function playDev2() {
   player.update();
 
 
+    if (keyIsDown(68)) {
+      player.rightMovement();
+    }
+    if (keyIsDown(65)) {
+      player.leftMovement();
+    }
 
-  if (keyIsDown(68)) {
-    player.rightMovement();
-  }
-  if (keyIsDown(65)) {
-    player.leftMovement();
-  }
+    for (var i = 0; i < plat.length; i++) {
+      plat[i].display();
+      player.CollidePlat(i);
+    }
+    for (var i = 0; i < coin.length; i++) {
 
+      player.CollideCoin(i);
+    }
 
-  for (var i = 0; i < plat.length; i++) {
-    plat[i].display();
-    player.CollidePlat(i);
-  }
-  for (var i = 0; i < coin.length; i++) {
+    for (var i = 0; i < coin.length; i++) {
+      coin[i].display();
+    }
 
-    player.CollideCoin(i);
-  }
-
-  player.display();
-
+    player.display();
+    pop();
+    fill(255);
+    textSize(20)
+    text(money + "$", 30, height - 30)
 }
 
 function keyPressed() {
