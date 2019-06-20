@@ -1,5 +1,8 @@
 // keyCodes: http://keycode.info/
+var jumpSound
+
 function preload() {
+  
   gameLogo = loadImage('https://i.imgur.com/G36MJb4.png');
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
   char1 = loadImage('https://i.imgur.com/tF9LW7z.png');
@@ -37,7 +40,6 @@ function setup() {
   createCanvas(550, 400);
   //splash screen
   splash = new Splash();
-  questions = new Questions();
   //confetti
   for (var i = 0; i < 500; i++) {
     confet[i] = new Confetti();
