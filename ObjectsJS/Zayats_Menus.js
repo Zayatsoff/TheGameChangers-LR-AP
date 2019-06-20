@@ -44,8 +44,8 @@ function playDev() {
   push();
   translate(0, -player.y + height - player.h * 2);
   image(level1bg, 0, height - 3230);
-  if (player.y <= -2580){
-    sceneNum = 9;
+  if (player.y <= -2580) {
+    SceneNum = 9;
     aksLvl1Win();
   }
 
@@ -134,3 +134,4 @@ function keyPressed() {
     player.jumped = false;
   }
 }
+
