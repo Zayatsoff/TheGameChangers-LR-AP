@@ -20,7 +20,7 @@ class Splash {
     //textFont(edunline);
     fill(0);
     textAlign(CENTER);
-    text('Jump or thump!', this.x, this.y-105);
+    text('Jump or thump!', this.x, this.y - 105);
 
     textSize(this.spacebar);
     //textFont(edunline);
@@ -41,6 +41,7 @@ class Splash {
 }
 
 function playDev() {
+  console.log(player.y);
   SceneNum = 7;
   push();
   translate(0, -player.y + height - player.h * 2);
@@ -49,6 +50,7 @@ function playDev() {
     SceneNum = 9;
     aksLvl1Win();
   }
+
 
   player.update();
 
@@ -92,31 +94,31 @@ function playDev2() {
   player.update();
 
 
-    if (keyIsDown(68)) {
-      player.rightMovement();
-    }
-    if (keyIsDown(65)) {
-      player.leftMovement();
-    }
+  if (keyIsDown(68)) {
+    player.rightMovement();
+  }
+  if (keyIsDown(65)) {
+    player.leftMovement();
+  }
 
-    for (var i = 0; i < plat.length; i++) {
-      plat[i].display();
-      player.CollidePlat(i);
-    }
-    for (var i = 0; i < coin.length; i++) {
+  for (var i = 0; i < plat.length; i++) {
+    plat[i].display();
+    player.CollidePlat(i);
+  }
+  for (var i = 0; i < coin.length; i++) {
 
-      player.CollideCoin(i);
-    }
+    player.CollideCoin(i);
+  }
 
-    for (var i = 0; i < coin.length; i++) {
-      coin[i].display();
-    }
+  for (var i = 0; i < coin.length; i++) {
+    coin[i].display();
+  }
 
-    player.display();
-    pop();
-    fill(255);
-    textSize(20)
-    text(money + "$", 30, height - 30)
+  player.display();
+  pop();
+  fill(255);
+  textSize(20)
+  text(money + "$", 30, height - 30)
 }
 
 function keyPressed() {
