@@ -19,10 +19,10 @@ function aksMenu() {
   textSize(73);
 
   fill(255, 255, 255);
-  text("Jump", 175, 69  );
-  text("or", 230, 122  );
+  text("Jump", 150, 69  );
+  text("or", 205, 122  );
   textSize(65);
-  text("Thump!", 155, 180  );
+  text("Thump!", 130, 180  );
   noStroke();
 
   //Rules
