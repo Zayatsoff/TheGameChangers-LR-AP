@@ -82,7 +82,6 @@ textSize(20)
 text(money + "$",30,height - 30)
 }
 /////////////////////////////////
-
 function playDev2() {
   SceneNum = 10;
   push();
@@ -107,22 +106,15 @@ function playDev2() {
 
   for (var i = 0; i < plat.length; i++) {
     plat[i].display();
-  player.CollidePlat(i);
+player.CollidePlat(i);
   }
   for (var i = 0; i < coin.length; i++) {
 
     player.CollideCoin(i);
   }
 
-  for (var i = 0; i < coin.length; i++) {
-    coin[i].display();
-  }
-
   player.display();
-  pop();
-  fill(255);
-  textSize(20)
-  text(money + "$",30,height - 30)
+
 }
 
 function keyPressed() {
