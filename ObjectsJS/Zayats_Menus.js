@@ -44,48 +44,46 @@ function playDev() {
   push();
   translate(0, -player.y + height - player.h * 2);
   image(level1bg, 0, height - 3230);
-  if (player.y <= -2580) {
-<<<<<<< HEAD
-=======
-    sceneNum = 20;
-    questions.display()
-  }
->>>>>>> parent of 95927c3... Update Zayats_Menus.js
-    SceneNum = 9;
-    aksLvl1Win();
-  }
+  // if (player.y <= -2580) {
+  //
+  //   sceneNum = 20;
+  //   questions.display()
+  // }
+  SceneNum = 9;
+  aksLvl1Win();
 
-  player.update();
+
+player.update();
 
 
 
-  if (keyIsDown(68)) {
-    player.rightMovement();
-  }
-  if (keyIsDown(65)) {
-    player.leftMovement();
-  }
+if (keyIsDown(68)) {
+  player.rightMovement();
+}
+if (keyIsDown(65)) {
+  player.leftMovement();
+}
 
 
-  for (var i = 0; i < plat.length; i++) {
-    plat[i].display();
+for (var i = 0; i < plat.length; i++) {
+  plat[i].display();
   player.CollidePlat(i);
-  }
-  for (var i = 0; i < coin.length; i++) {
+}
+for (var i = 0; i < coin.length; i++) {
 
-    player.CollideCoin(i);
-  }
+  player.CollideCoin(i);
+}
 
-  for (var i = 0; i < coin.length; i++) {
-    coin[i].display();
-  }
+for (var i = 0; i < coin.length; i++) {
+  coin[i].display();
+}
 
 
-  player.display();
-  pop();
-  fill(0);
+player.display();
+pop();
+fill(0);
 textSize(20)
-text(money + "$",30,height - 30)
+text(money + "$", 30, height - 30)
 }
 /////////////////////////////////
 function playDev2() {
@@ -112,7 +110,7 @@ function playDev2() {
 
   for (var i = 0; i < plat.length; i++) {
     plat[i].display();
-player.CollidePlat(i);
+    player.CollidePlat(i);
   }
   for (var i = 0; i < coin.length; i++) {
 
@@ -140,4 +138,3 @@ function keyPressed() {
     player.jumped = false;
   }
 }
-
