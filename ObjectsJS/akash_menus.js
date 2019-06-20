@@ -228,7 +228,7 @@ function aksAboutUs() {
 
 
   textSize(15)
-  text("Due Date", 450, 390  );
+  text("June 21", 450, 390  );
 
   //backButton
   textSize(25);
@@ -333,11 +333,15 @@ function Questions() {
 
 
     }
-
-
-  }
-
 }
+  
+ 
+}
+
+  function drawQuestions(){
+  Questions()
+    questions.display
+  }
 
 function Correct() {
   sceneNum = 13
