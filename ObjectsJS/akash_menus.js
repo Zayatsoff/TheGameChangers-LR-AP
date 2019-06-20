@@ -1,13 +1,13 @@
 var questions
 
-// function drawButton(x, y, words) {
-//   fill(255)
-//   rect(x, y, 70, 40, 6);
-//   fill(0, 0, 0)
-//   textAlign(LEFT, TOP)
-//   textSize(15)
-//   text(words, x + 15, y + 12);
-// }
+function drawButton(x, y, words) {
+  fill(255)
+  rect(x, y, 70, 40, 6);
+  fill(0, 0, 0)
+  textAlign(LEFT, TOP)
+  textSize(15)
+  text(words, x + 15, y + 12);
+}
 
 function aksMenu() {
   SceneNum = 1;
