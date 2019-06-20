@@ -1,5 +1,4 @@
 // keyCodes: http://keycode.info/
-var jumpSound
 
 function preload() {
   
