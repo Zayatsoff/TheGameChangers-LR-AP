@@ -255,8 +255,7 @@ function aksLvl1Win() {
 
 function akslvl2Win() {
   SceneNum = 11;
-
-  pop();
+  
   background(0, 221, 3)
   textSize(50)
   text("YOU WIN!!!!!", 140, 160)
@@ -277,5 +276,5 @@ text("Thanks for playing!",100,200)
     confet[i].display();
     confet[i].update();
   }
-  
+
 }

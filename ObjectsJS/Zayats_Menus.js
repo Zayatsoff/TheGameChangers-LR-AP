@@ -48,16 +48,11 @@ function playDev() {
   translate(0, -player.y + height - player.h * 2);
   image(level1bg, 0, height - 3230);
   if (player.y <= -2580) {
-    SceneNum = 9;
-    aksLvl1Win();
+    SceneNum = 12;
+    questions[0].display();
 
   }
-Wquestion = 1;
-  if (player.y <= -1000 && player.y >= -1005 ) {
 
-      questions[Wquestion].display();
-
-  }
 
 
   player.update();
@@ -96,8 +91,9 @@ function playDev2() {
   translate(0, -player.y + height - player.h * 2);
   image(level2bg, 0, height - 3230);
   if (player.y <= -2580) {
-    SceneNum = 11;
-    akslvl2Win();
+    SceneNum = 13;
+    questions2[0].display();
+
   }
 
   player.update();
