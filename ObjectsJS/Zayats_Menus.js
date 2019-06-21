@@ -41,6 +41,7 @@ class Splash {
 }
 
 function playDev() {
+
   level = 1;
   SceneNum = 7;
   push();
@@ -53,9 +54,9 @@ function playDev() {
   }
 
   if (player.y <= -1000 && player.y >= -1005 ) {
-    for (var i = 0; i < 500; i++) {
-      questions[i].display();
-    }
+
+      questions[Wquestion].display();
+
   }
 
 

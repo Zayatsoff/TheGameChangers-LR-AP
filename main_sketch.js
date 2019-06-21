@@ -34,7 +34,7 @@ var coin = [];
 var money = 0;
 var quest = null;
 var level = 0;
-
+var Wquestion = 0;
 
 function setup() {
   createCanvas(550, 400);
@@ -100,6 +100,10 @@ function draw() {
   } else if (SceneNum === 11) {
     akslvl2Win();
   }
+
+} else if (SceneNum === 12) {
+  questions[Wquestion].display();
+}
   //Splash
   else {
 

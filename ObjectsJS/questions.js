@@ -21,6 +21,7 @@ class Questions {
   }
 
   display() {
+    SceneNum = 12;
     background(85, 105, 137);
     if (this.ASM === 1) {
       this.add();
