@@ -192,6 +192,12 @@ function mouseClicked() {
     SceneNum = 10;
 
   }
+  
+  //from win to main menu
+  else if (sceneNum = 11 && mouseX >= 245 && mouseX <= 315 && mouseY >= 300 && mouseY <= 340){
+  sceneNum = 1;
+    aksMenu();
+  }
 }
 
 // function keyPressed() {
