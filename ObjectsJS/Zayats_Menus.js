@@ -127,6 +127,7 @@ function playDev2() {
 
 function keyPressed() {
   if (keyCode === 87 && player.jumped === false) {
+    jumpSound.play();
     player.jump();
     player.jumped = true;
   }
