@@ -193,18 +193,3 @@ function mouseClicked() {
 
   }
 }
-
-// function keyPressed() {
-//   if (SceneNum === 7 && keyCode === 87 && player.jumped === false) {
-//     player.jump();
-//     player.jumped = true;
-//   }
-//
-//   if (SceneNum === 7 && keyCode === 75 ) {
-//     player.y *= 2;
-//   }
-//
-//   if (SceneNum === 7 && player.velocity >= 0) {
-//     player.jumped = false;
-//   }
-// }

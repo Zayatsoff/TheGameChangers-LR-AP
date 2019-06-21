@@ -48,12 +48,12 @@ function playDev() {
   image(level1bg, 0, height - 3230);
   if (player.y <= -1000) {
     SceneNum = 12;
-    drawQuestions();
+  
   }
 
-  if (player.y <= -1000 && player.y >= -1005 ) {
-    questions.display();
-  }
+  // if (player.y <= -1000 && player.y >= -1005 ) {
+  //   questions.display();
+  // }
 
 
   player.update();
