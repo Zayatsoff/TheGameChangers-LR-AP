@@ -266,3 +266,16 @@ function akslvl2Win() {
   }
   drawButton(width / 2 - 30, 300, "Go on")
 }
+
+function endScreen() {
+pop();
+  background(38, 239, 239)
+  textSize(40)
+text("Thanks for playing!",100,200)
+  //confetti
+  for (var i = 0; i < 500; i++) {
+    confet[i].display();
+    confet[i].update();
+  }
+  
+}
