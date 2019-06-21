@@ -349,6 +349,12 @@ function Correct() {
   background(26, 226, 0)
   text("Correct!", 200, 100)
   drawButton(250, 250, "next")
+  
+  //confetti
+    for (var i = 0; i < 500; i++) {
+    confet[i].display();
+    confet[i].update();
+  }
 }
 
 function Wrong() {
