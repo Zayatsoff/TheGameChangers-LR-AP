@@ -1,7 +1,7 @@
 // keyCodes: http://keycode.info/
 
 function preload() {
-  
+
   gameLogo = loadImage('https://i.imgur.com/G36MJb4.png');
   bgIMG = loadImage('https://i.imgur.com/K4nIOAW.jpg');
   char1 = loadImage('https://i.imgur.com/tF9LW7z.png');
@@ -37,6 +37,7 @@ var money = 0;
 
 function setup() {
   createCanvas(550, 400);
+  questions = new Questions();
   //splash screen
   splash = new Splash();
   //confetti
