@@ -18,36 +18,31 @@ class Questions {
     this.A = [this.AA, this.AA + 15, this.AA - 30];
     this.S = [this.SA, this.SA + 15, this.SA - 30];
     this.M = [this.MA, this.MA + 5, this.MA - 6];
-    //
-    this.shuffA = shuffle(this.A);
-    this.shuffS = shuffle(this.S);
-    this.shuffM = shuffle(this.M);
   }
 
-  //   once() {
-  //     buttons.shuffleADD(this.AA, this.AA + 15, this.AA - 30);
-  //   buttons.shuffleSUB(this.SA, this.SA + 15, this.SA - 30);
-  //         buttons.shuffleMULT(this.MA, this.MA + 5, this.MA - 6);
-
-  //   }
   display() {
     background(85, 105, 137);
     if (this.ASM === 1) {
       this.add();
       this.butt();
-      this.text(this.shuffA)
+      this.textA(this.A)
+      quest = 1;
 
     }
 
     if (this.ASM === 2) {
       this.sub();
       this.butt();
-      this.text(this.shuffS)
+      this.textS(this.S)
+      quest = 2;
+
     }
     if (this.ASM === 3) {
       this.mult();
       this.butt();
-      this.text(this.shuffM)
+      this.textM(this.M)
+      quest = 3;
+
     }
 
   }
@@ -75,12 +70,27 @@ class Questions {
     }
   }
 
-  text(array) {
+  textA(txt) {
    fill(255);
 
-    text(array[0], 150  - 50, 245, 50);
-    text(array[1], 300 - 50, 245, 50);
-    text(array[2], 450 - 50,245, 50) ;
+    text(txt[1], 150  - 50, 245, 50);
+    text(txt[0], 300 - 50, 245, 50);
+    text(txt[2], 450 - 50,245, 50) ;
+  }
+
+  textS(txt) {
+   fill(255);
+    text(txt[2], 150  - 50, 245, 50);
+    text(txt[1], 300 - 50, 245, 50);
+    text(txt[0], 450 - 50,245, 50) ;
+  }
+
+  textM(txt) {
+   fill(255);
+
+    text(txt[0], 150  - 50, 245, 50);
+    text(txt[2], 300 - 50, 245, 50);
+    text(txt[1], 450 - 50,245, 50) ;
   }
 
 }

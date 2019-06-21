@@ -32,12 +32,15 @@ var plat = [];
 let OurChar = null;
 var coin = [];
 var money = 0;
-
+var quest = null;
+var level = 0;
 
 
 function setup() {
   createCanvas(550, 400);
-
+  for (var i = 0; i < 500; i++) {
+    questions[i] = new Questions();
+  }
   //splash screen
   splash = new Splash();
   //confetti
@@ -179,7 +182,7 @@ function mouseClicked() {
   // Char select
   else if (SceneNum === 3 && mouseX >= 125 && mouseX <= 205 && mouseY >= 120 && mouseY <= 240) {
     OurChar = char1;
-    console.log(OurChar);
+
   } else if (SceneNum === 3 && mouseX >= 325 && mouseX <= 405 && mouseY >= 120 && mouseY <= 240) {
     OurChar = char2;
   }
@@ -192,25 +195,35 @@ function mouseClicked() {
     SceneNum = 10;
 
   }
-  
+
   //from win to main menu
   else if (sceneNum = 11 && mouseX >= 245 && mouseX <= 315 && mouseY >= 300 && mouseY <= 340){
   sceneNum = 1;
     aksMenu();
   }
-}
 
-// function keyPressed() {
-//   if (SceneNum === 7 && keyCode === 87 && player.jumped === false) {
-//     player.jump();
-//     player.jumped = true;
-//   }
-//
-//   if (SceneNum === 7 && keyCode === 75 ) {
-//     player.y *= 2;
-//   }
-//
-//   if (SceneNum === 7 && player.velocity >= 0) {
-//     player.jumped = false;
-//   }
-// }
+  // question time
+  else if (level === 1 && quest === 1 && mouseX >= 230 && mouseX <=330 && mouseY >=200 && mouseY <=250){
+playDev();
+  }
+
+  else if (level === 1 && quest === 2 && mouseX >= 380 && mouseX <=480 && mouseY >=200 && mouseY <=250){
+playDev();
+  }
+
+  else if (level === 1 && quest === 3 && mouseX >= 80 && mouseX <=180 && mouseY >=200 && mouseY <=250){
+playDev();
+  }
+
+  else if (level === 2 && quest === 1 && mouseX >= 230 && mouseX <=330 && mouseY >=200 && mouseY <=250){
+playDev2();
+  }
+
+  else if (level === 2 && quest === 2 && mouseX >= 380 && mouseX <=480 && mouseY >=200 && mouseY <=250){
+playDev2();
+  }
+
+  else if (level === 2 && quest === 3 && mouseX >= 80 && mouseX <=180 && mouseY >=200 && mouseY <=250){
+playDev2();
+  }
+}

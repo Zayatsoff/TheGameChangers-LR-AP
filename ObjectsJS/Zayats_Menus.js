@@ -41,7 +41,7 @@ class Splash {
 }
 
 function playDev() {
-  console.log(player.y);
+  level = 1;
   SceneNum = 7;
   push();
   translate(0, -player.y + height - player.h * 2);
@@ -49,12 +49,14 @@ function playDev() {
   if (player.y <= -2580) {
     SceneNum = 9;
     aksLvl1Win();
-  
+
   }
 
-  // if (player.y <= -1000 && player.y >= -1005 ) {
-  //   questions.display();
-  // }
+  if (player.y <= -1000 && player.y >= -1005 ) {
+    for (var i = 0; i < 500; i++) {
+      questions[i].display();
+    }
+  }
 
 
   player.update();
@@ -87,6 +89,7 @@ function playDev() {
 }
 /////////////////////////////////
 function playDev2() {
+  level = 2;
   SceneNum = 10;
   push();
   translate(0, -player.y + height - player.h * 2);
