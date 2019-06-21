@@ -37,7 +37,7 @@ var money = 0;
 
 function setup() {
   createCanvas(550, 400);
-  questions = new Questions();
+
   //splash screen
   splash = new Splash();
   //confetti
