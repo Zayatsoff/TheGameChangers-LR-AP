@@ -46,7 +46,7 @@ function playDev() {
   push();
   translate(0, -player.y + height - player.h * 2);
   image(level1bg, 0, height - 3230);
-  if (player.y <= -1300) {
+  if (player.y <= -1000) {
     SceneNum = 12;
     drawQuestions();
   }
