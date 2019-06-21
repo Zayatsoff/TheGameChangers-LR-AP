@@ -1,4 +1,3 @@
-var questions
 
 function drawButton(x, y, words) {
   fill(255)
