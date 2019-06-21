@@ -35,11 +35,11 @@ var money = 0;
 var quest = null;
 var level = 0;
 var Wquestion = 0;
-
+var questions = [];
 function setup() {
   createCanvas(550, 400);
   for (var i = 0; i < 500; i++) {
-    questions[i] = new Questions();
+  questions[i] = new Questions();
   }
   //splash screen
   splash = new Splash();
@@ -101,20 +101,19 @@ function draw() {
     akslvl2Win();
   }
 
-} else if (SceneNum === 12) {
-  questions[Wquestion].display();
+else if (SceneNum === 12) {
+  questions[1].display();
 }
-  //Splash
-  else {
-
-    push();
-    splash.update();
-    splash.show();
-    pop();
-    if (keyCode === 32 && SceneNum === 0) {
-      aksMenu();
-    }
+//Splash
+else {
+  push();
+  splash.update();
+  splash.show();
+  pop();
+  if (keyCode === 32 && SceneNum === 0) {
+    aksMenu();
   }
+}
 
 }
 
@@ -201,33 +200,23 @@ function mouseClicked() {
   }
 
   //from win to main menu
-  else if (sceneNum = 11 && mouseX >= 245 && mouseX <= 315 && mouseY >= 300 && mouseY <= 340){
-  sceneNum = 1;
+  else if (sceneNum = 11 && mouseX >= 245 && mouseX <= 315 && mouseY >= 300 && mouseY <= 340) {
+    sceneNum = 1;
     aksMenu();
   }
 
   // question time
-  else if (level === 1 && quest === 1 && mouseX >= 230 && mouseX <=330 && mouseY >=200 && mouseY <=250){
-playDev();
-  }
-
-  else if (level === 1 && quest === 2 && mouseX >= 380 && mouseX <=480 && mouseY >=200 && mouseY <=250){
-playDev();
-  }
-
-  else if (level === 1 && quest === 3 && mouseX >= 80 && mouseX <=180 && mouseY >=200 && mouseY <=250){
-playDev();
-  }
-
-  else if (level === 2 && quest === 1 && mouseX >= 230 && mouseX <=330 && mouseY >=200 && mouseY <=250){
-playDev2();
-  }
-
-  else if (level === 2 && quest === 2 && mouseX >= 380 && mouseX <=480 && mouseY >=200 && mouseY <=250){
-playDev2();
-  }
-
-  else if (level === 2 && quest === 3 && mouseX >= 80 && mouseX <=180 && mouseY >=200 && mouseY <=250){
-playDev2();
+  else if (level === 1 && quest === 1 && mouseX >= 230 && mouseX <= 330 && mouseY >= 200 && mouseY <= 250) {
+    playDev();
+  } else if (level === 1 && quest === 2 && mouseX >= 380 && mouseX <= 480 && mouseY >= 200 && mouseY <= 250) {
+    playDev();
+  } else if (level === 1 && quest === 3 && mouseX >= 80 && mouseX <= 180 && mouseY >= 200 && mouseY <= 250) {
+    playDev();
+  } else if (level === 2 && quest === 1 && mouseX >= 230 && mouseX <= 330 && mouseY >= 200 && mouseY <= 250) {
+    playDev2();
+  } else if (level === 2 && quest === 2 && mouseX >= 380 && mouseX <= 480 && mouseY >= 200 && mouseY <= 250) {
+    playDev2();
+  } else if (level === 2 && quest === 3 && mouseX >= 80 && mouseX <= 180 && mouseY >= 200 && mouseY <= 250) {
+    playDev2();
   }
 }
