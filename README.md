@@ -1,5 +1,6 @@
-# ICS2O-☺The Game Changers☺-LR-AP
-Learn with us game summative - Lior Rozin and Akash Prasad;
+# ☺The Game Changers☺-LR-AP
+A game created in JS with the p5.js library by Lior R and Akash P. The game was made in collaboration with Grade 3 students; Dexter, Abygail, and Jeremey.
+
 
 Image album: https://imgur.com/a/NEVNEtQ
 
